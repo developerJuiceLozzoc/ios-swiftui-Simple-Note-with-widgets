@@ -7,23 +7,30 @@
 
 import SwiftUI
 import RealmSwift
+//import
 
 
 
 struct CreateEditNote: View {
     @EnvironmentObject var store: NoteStore
     @State var notecontent: String = ""
-    
-    
     var note: Note? = nil
     @Binding var isEditing: Bool
+    var simpleDate: String {
+        let d = Date()
+        let df = DateFormatter()
+        df.dateFormat = "MMMM DD, YYYY  mm:hh at "
+        return df.string(from: d)
+    }
    
-    //    @State var notebody: NSAttributedString
     var body: some View {
-        VStack(spacing: 0){
-//            TextEditor(text: $notebody)
+        VStack{
+            HStack{
+                Spacer()
+                Text("\(simpleDate)").font(.caption)
+                Spacer()
+            }
             RichTextEditor(text: $notecontent, initialText: note)
-            Spacer()
         }
         .padding()
         .toolbar {

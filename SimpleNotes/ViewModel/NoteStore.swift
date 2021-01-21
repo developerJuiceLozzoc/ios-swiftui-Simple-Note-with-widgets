@@ -32,6 +32,7 @@ extension NoteStore {
         let items = text.split(separator: "\n", maxSplits: 1, omittingEmptySubsequences: true)
         let newNote = Note()
         newNote.title = items[0].description
+        newNote.dateEdited = Date().timeIntervalSince1970
         
         if items.count > 1 { newNote.body = items[1].description }
         else { newNote.body = "" }
@@ -55,6 +56,8 @@ extension NoteStore {
             let realm = try Realm()
             try realm.write {
                 note.title = items[0].description
+                note.dateEdited = Date().timeIntervalSince1970
+
                 if items.count > 1 {
                     note.body = items[1].description
                 }

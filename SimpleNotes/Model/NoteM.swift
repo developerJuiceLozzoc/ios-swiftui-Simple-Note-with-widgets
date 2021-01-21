@@ -20,6 +20,7 @@ class Note: Object, Identifiable {
     @objc dynamic var id = UUID().uuidString
     @objc dynamic var body: String = ""
     @objc dynamic var title: String = ""
+    @objc dynamic var dateEdited: Double = 0.0
     var parentFolder = LinkingObjects(fromType: Folder.self, property: "notes")
 }
 

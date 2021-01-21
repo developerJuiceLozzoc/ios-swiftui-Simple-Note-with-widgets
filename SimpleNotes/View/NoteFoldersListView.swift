@@ -30,6 +30,10 @@ struct NoteFoldersListView: View {
     @EnvironmentObject var store: NoteStore
     @State var showNew: Bool = false
     
+    init(){
+        UITableView.appearance().showsVerticalScrollIndicator = false
+    }
+    
 var body: some View {
     NavigationView{
 //        ScrollView(showsIndicators: false){
