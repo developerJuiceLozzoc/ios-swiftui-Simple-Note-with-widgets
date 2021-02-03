@@ -7,29 +7,114 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		326EC2B2E5877109AEB70EEB /* Pods_SimpleNotes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3364DB3792BC51C2A95BF77 /* Pods_SimpleNotes.framework */; };
+		B55F8CE625CA092E00FCAD95 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B55F8CE525CA092E00FCAD95 /* Assets.xcassets */; };
+		B55F8CEC25CA0CB900FCAD95 /* UserPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55F8CEB25CA0CB900FCAD95 /* UserPreferences.swift */; };
+		B55F8CF225CA0DAF00FCAD95 /* UIFontFamilyPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55F8CF125CA0DAF00FCAD95 /* UIFontFamilyPicker.swift */; };
+		B55F8CFD25CA26C100FCAD95 /* SytaxtHighlighingTextStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55F8CFC25CA26C100FCAD95 /* SytaxtHighlighingTextStorage.swift */; };
+		B55F8D0325CA277100FCAD95 /* RichEditorRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55F8D0225CA277100FCAD95 /* RichEditorRepresentable.swift */; };
 		B5798B9F25B7C0B6005EE93E /* SimpleNotesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5798B9E25B7C0B6005EE93E /* SimpleNotesApp.swift */; };
-		B5798BA125B7C0B6005EE93E /* NoteFoldersListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5798BA025B7C0B6005EE93E /* NoteFoldersListView.swift */; };
-		B5798BA325B7C0B7005EE93E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5798BA225B7C0B7005EE93E /* Assets.xcassets */; };
+		B5798BA125B7C0B6005EE93E /* ListNoteFolders.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5798BA025B7C0B6005EE93E /* ListNoteFolders.swift */; };
 		B5798BA625B7C0B7005EE93E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5798BA525B7C0B7005EE93E /* Preview Assets.xcassets */; };
 		B5798BA825B7C0B7005EE93E /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5798BA725B7C0B7005EE93E /* Persistence.swift */; };
 		B5798BB525B7C118005EE93E /* NoteM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5798BB425B7C118005EE93E /* NoteM.swift */; };
 		B5798BBD25B7E078005EE93E /* CreateEditNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5798BBC25B7E078005EE93E /* CreateEditNote.swift */; };
-		B5798BC225B7E701005EE93E /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = B5798BC125B7E701005EE93E /* RealmSwift */; };
-		B5798BC425B7E701005EE93E /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = B5798BC325B7E701005EE93E /* Realm */; };
 		B5798BD225B7EEE8005EE93E /* NoteStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5798BD125B7EEE8005EE93E /* NoteStore.swift */; };
 		B5798BDA25B87CEB005EE93E /* BindingPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5798BD925B87CEB005EE93E /* BindingPreview.swift */; };
-		B5798BE225B88CE9005EE93E /* RichTextEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5798BE125B88CE9005EE93E /* RichTextEditor.swift */; };
+		B5798BEB25BA0172005EE93E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5798BEA25BA0172005EE93E /* Extensions.swift */; };
+		B5798BEE25BA09B1005EE93E /* NoteEditVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5798BED25BA09B1005EE93E /* NoteEditVM.swift */; };
+		B5798BF325BA1CC8005EE93E /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5798BF225BA1CC8005EE93E /* CloudKit.framework */; };
+		B5798BFC25BA26C3005EE93E /* NoteCoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B5798BFA25BA26C3005EE93E /* NoteCoreData.xcdatamodeld */; };
+		B592C60025BA4B4A00E12374 /* LongPress.swift in Sources */ = {isa = PBXBuildFile; fileRef = B592C5FF25BA4B4A00E12374 /* LongPress.swift */; };
+		B592C66A25BF89E600E12374 /* SNASButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B592C66925BF89E600E12374 /* SNASButton.swift */; };
+		B5A3FDA725C0D5FA00FD12D2 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5A3FDA625C0D5FA00FD12D2 /* WidgetKit.framework */; };
+		B5A3FDA925C0D5FB00FD12D2 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5A3FDA825C0D5FA00FD12D2 /* SwiftUI.framework */; };
+		B5A3FDAF25C0D5FD00FD12D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5A3FDAE25C0D5FC00FD12D2 /* Assets.xcassets */; };
+		B5A3FDB525C0D5FD00FD12D2 /* SimpleNoteWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = B5A3FDA525C0D5FA00FD12D2 /* SimpleNoteWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		B5A3FDBC25C0DA4500FD12D2 /* NoteStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5798BD125B7EEE8005EE93E /* NoteStore.swift */; };
+		B5A3FDBF25C0DA5400FD12D2 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5798BA725B7C0B7005EE93E /* Persistence.swift */; };
+		B5A3FDC225C0DA6F00FD12D2 /* NoteCoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B5798BFA25BA26C3005EE93E /* NoteCoreData.xcdatamodeld */; };
+		B5A3FDFA25C1F22F00FD12D2 /* SimpleNotesWidgetConfiguration.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = B5A3FDF925C1F22F00FD12D2 /* SimpleNotesWidgetConfiguration.intentdefinition */; };
+		B5A3FDFB25C1F22F00FD12D2 /* SimpleNotesWidgetConfiguration.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = B5A3FDF925C1F22F00FD12D2 /* SimpleNotesWidgetConfiguration.intentdefinition */; };
+		B5D2D34525C1FD7B00A72A53 /* Intents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5B4E7DF25C1F9D200E389AF /* Intents.framework */; };
+		B5D2D34825C1FD7B00A72A53 /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D2D34725C1FD7B00A72A53 /* IntentHandler.swift */; };
+		B5D2D34F25C1FD7B00A72A53 /* IntentsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5B4E7EA25C1F9D200E389AF /* IntentsUI.framework */; };
+		B5D2D35225C1FD7B00A72A53 /* IntentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D2D35125C1FD7B00A72A53 /* IntentViewController.swift */; };
+		B5D2D35525C1FD7B00A72A53 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5D2D35325C1FD7B00A72A53 /* MainInterface.storyboard */; };
+		B5D2D35925C1FD7B00A72A53 /* DynamicNotesListUI.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = B5D2D34E25C1FD7B00A72A53 /* DynamicNotesListUI.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		B5D2D35C25C1FD7B00A72A53 /* DynamicNotesList.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = B5D2D34425C1FD7B00A72A53 /* DynamicNotesList.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		B5D2D36925C1FD8300A72A53 /* SimpleNotesWidgetConfiguration.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = B5A3FDF925C1F22F00FD12D2 /* SimpleNotesWidgetConfiguration.intentdefinition */; };
+		B5D2D37925C1FD9400A72A53 /* SimpleNotesWidgetConfiguration.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = B5A3FDF925C1F22F00FD12D2 /* SimpleNotesWidgetConfiguration.intentdefinition */; };
+		B5D2D37E25C1FD9900A72A53 /* NoteStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5798BD125B7EEE8005EE93E /* NoteStore.swift */; };
+		B5D2D38325C1FD9900A72A53 /* NoteStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5798BD125B7EEE8005EE93E /* NoteStore.swift */; };
+		B5D2D38825C1FD9E00A72A53 /* NoteCoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B5798BFA25BA26C3005EE93E /* NoteCoreData.xcdatamodeld */; };
+		B5D2D38D25C1FD9E00A72A53 /* NoteCoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B5798BFA25BA26C3005EE93E /* NoteCoreData.xcdatamodeld */; };
+		B5D2D38E25C1FDA000A72A53 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5798BA725B7C0B7005EE93E /* Persistence.swift */; };
+		B5D2D39325C1FDA000A72A53 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5798BA725B7C0B7005EE93E /* Persistence.swift */; };
+		B5E86C5725C2081B00C09CBB /* SimpleNoteWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A3FDAB25C0D5FB00FD12D2 /* SimpleNoteWidget.swift */; };
+		B5E86C5C25C2081B00C09CBB /* SimpleNoteWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A3FDAB25C0D5FB00FD12D2 /* SimpleNoteWidget.swift */; };
+		B5E86C5D25C2081C00C09CBB /* SimpleNoteWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A3FDAB25C0D5FB00FD12D2 /* SimpleNoteWidget.swift */; };
+		B5E86C7425C21DAA00C09CBB /* DummyItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E86C7325C21DAA00C09CBB /* DummyItem.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		B5A3FDB325C0D5FD00FD12D2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B5798B9325B7C0B6005EE93E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B5A3FDA425C0D5FA00FD12D2;
+			remoteInfo = SimpleNoteWidgetExtension;
+		};
+		B5D2D35725C1FD7B00A72A53 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B5798B9325B7C0B6005EE93E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B5D2D34D25C1FD7B00A72A53;
+			remoteInfo = DynamicNotesListUI;
+		};
+		B5D2D35A25C1FD7B00A72A53 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B5798B9325B7C0B6005EE93E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B5D2D34325C1FD7B00A72A53;
+			remoteInfo = DynamicNotesList;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B592C66525BD012800E12374 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5A3FDB925C0D5FD00FD12D2 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				B5D2D35925C1FD7B00A72A53 /* DynamicNotesListUI.appex in Embed App Extensions */,
+				B5D2D35C25C1FD7B00A72A53 /* DynamicNotesList.appex in Embed App Extensions */,
+				B5A3FDB525C0D5FD00FD12D2 /* SimpleNoteWidgetExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		2281ABA0CF6A868455035880 /* Pods-SimpleNotes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleNotes.debug.xcconfig"; path = "Target Support Files/Pods-SimpleNotes/Pods-SimpleNotes.debug.xcconfig"; sourceTree = "<group>"; };
-		6CF97D5BE926B4FB3BB115D4 /* Pods-SimpleNotes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleNotes.release.xcconfig"; path = "Target Support Files/Pods-SimpleNotes/Pods-SimpleNotes.release.xcconfig"; sourceTree = "<group>"; };
-		A3364DB3792BC51C2A95BF77 /* Pods_SimpleNotes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimpleNotes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B55F8CE525CA092E00FCAD95 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B55F8CEB25CA0CB900FCAD95 /* UserPreferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPreferences.swift; sourceTree = "<group>"; };
+		B55F8CF125CA0DAF00FCAD95 /* UIFontFamilyPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFontFamilyPicker.swift; sourceTree = "<group>"; };
+		B55F8CFC25CA26C100FCAD95 /* SytaxtHighlighingTextStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SytaxtHighlighingTextStorage.swift; sourceTree = "<group>"; };
+		B55F8D0225CA277100FCAD95 /* RichEditorRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RichEditorRepresentable.swift; sourceTree = "<group>"; };
 		B5798B9B25B7C0B6005EE93E /* SimpleNotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleNotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5798B9E25B7C0B6005EE93E /* SimpleNotesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleNotesApp.swift; sourceTree = "<group>"; };
-		B5798BA025B7C0B6005EE93E /* NoteFoldersListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteFoldersListView.swift; sourceTree = "<group>"; };
-		B5798BA225B7C0B7005EE93E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B5798BA025B7C0B6005EE93E /* ListNoteFolders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListNoteFolders.swift; sourceTree = "<group>"; };
 		B5798BA525B7C0B7005EE93E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B5798BA725B7C0B7005EE93E /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		B5798BAC25B7C0B7005EE93E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -37,7 +122,32 @@
 		B5798BBC25B7E078005EE93E /* CreateEditNote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEditNote.swift; sourceTree = "<group>"; };
 		B5798BD125B7EEE8005EE93E /* NoteStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteStore.swift; sourceTree = "<group>"; };
 		B5798BD925B87CEB005EE93E /* BindingPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingPreview.swift; sourceTree = "<group>"; };
-		B5798BE125B88CE9005EE93E /* RichTextEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RichTextEditor.swift; sourceTree = "<group>"; };
+		B5798BEA25BA0172005EE93E /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		B5798BED25BA09B1005EE93E /* NoteEditVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteEditVM.swift; sourceTree = "<group>"; };
+		B5798BF025BA1CC4005EE93E /* SimpleNotes.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SimpleNotes.entitlements; sourceTree = "<group>"; };
+		B5798BF225BA1CC8005EE93E /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		B5798BFB25BA26C3005EE93E /* NoteCoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NoteCoreData.xcdatamodel; sourceTree = "<group>"; };
+		B592C5FF25BA4B4A00E12374 /* LongPress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LongPress.swift; sourceTree = "<group>"; };
+		B592C66925BF89E600E12374 /* SNASButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SNASButton.swift; sourceTree = "<group>"; };
+		B5A3FDA525C0D5FA00FD12D2 /* SimpleNoteWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = SimpleNoteWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5A3FDA625C0D5FA00FD12D2 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		B5A3FDA825C0D5FA00FD12D2 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		B5A3FDAB25C0D5FB00FD12D2 /* SimpleNoteWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleNoteWidget.swift; sourceTree = "<group>"; };
+		B5A3FDAE25C0D5FC00FD12D2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B5A3FDB025C0D5FD00FD12D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B5A3FDF925C1F22F00FD12D2 /* SimpleNotesWidgetConfiguration.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = SimpleNotesWidgetConfiguration.intentdefinition; sourceTree = "<group>"; };
+		B5B4E7DF25C1F9D200E389AF /* Intents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Intents.framework; path = System/Library/Frameworks/Intents.framework; sourceTree = SDKROOT; };
+		B5B4E7EA25C1F9D200E389AF /* IntentsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IntentsUI.framework; path = System/Library/Frameworks/IntentsUI.framework; sourceTree = SDKROOT; };
+		B5D2D34425C1FD7B00A72A53 /* DynamicNotesList.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = DynamicNotesList.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5D2D34725C1FD7B00A72A53 /* IntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentHandler.swift; sourceTree = "<group>"; };
+		B5D2D34925C1FD7B00A72A53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B5D2D34E25C1FD7B00A72A53 /* DynamicNotesListUI.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = DynamicNotesListUI.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5D2D35125C1FD7B00A72A53 /* IntentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentViewController.swift; sourceTree = "<group>"; };
+		B5D2D35425C1FD7B00A72A53 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		B5D2D35625C1FD7B00A72A53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B5E86C6D25C20ACA00C09CBB /* SimpleNoteWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SimpleNoteWidgetExtension.entitlements; sourceTree = "<group>"; };
+		B5E86C6E25C20AD300C09CBB /* DynamicNotesList.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DynamicNotesList.entitlements; sourceTree = "<group>"; };
+		B5E86C7325C21DAA00C09CBB /* DummyItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,28 +155,46 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B5798BC425B7E701005EE93E /* Realm in Frameworks */,
-				B5798BC225B7E701005EE93E /* RealmSwift in Frameworks */,
-				326EC2B2E5877109AEB70EEB /* Pods_SimpleNotes.framework in Frameworks */,
+				B5798BF325BA1CC8005EE93E /* CloudKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5A3FDA225C0D5FA00FD12D2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5A3FDA925C0D5FB00FD12D2 /* SwiftUI.framework in Frameworks */,
+				B5A3FDA725C0D5FA00FD12D2 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5D2D34125C1FD7B00A72A53 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5D2D34525C1FD7B00A72A53 /* Intents.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5D2D34B25C1FD7B00A72A53 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5D2D34F25C1FD7B00A72A53 /* IntentsUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		69D16B97FF49574F9B5427CD /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				2281ABA0CF6A868455035880 /* Pods-SimpleNotes.debug.xcconfig */,
-				6CF97D5BE926B4FB3BB115D4 /* Pods-SimpleNotes.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
 		8433B1F6771D8C057967562B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				A3364DB3792BC51C2A95BF77 /* Pods_SimpleNotes.framework */,
+				B5798BF225BA1CC8005EE93E /* CloudKit.framework */,
+				B5A3FDA625C0D5FA00FD12D2 /* WidgetKit.framework */,
+				B5A3FDA825C0D5FA00FD12D2 /* SwiftUI.framework */,
+				B5B4E7DF25C1F9D200E389AF /* Intents.framework */,
+				B5B4E7EA25C1F9D200E389AF /* IntentsUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -74,10 +202,14 @@
 		B5798B9225B7C0B6005EE93E = {
 			isa = PBXGroup;
 			children = (
+				B5E86C6D25C20ACA00C09CBB /* SimpleNoteWidgetExtension.entitlements */,
 				B5798B9D25B7C0B6005EE93E /* SimpleNotes */,
+				B5A3FDAA25C0D5FB00FD12D2 /* SimpleNoteWidget */,
+				B5D2D34625C1FD7B00A72A53 /* DynamicNotesList */,
+				B5D2D35025C1FD7B00A72A53 /* DynamicNotesListUI */,
 				B5798B9C25B7C0B6005EE93E /* Products */,
-				69D16B97FF49574F9B5427CD /* Pods */,
 				8433B1F6771D8C057967562B /* Frameworks */,
+				FAAD34CE0752E8334007FF0D /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -85,6 +217,9 @@
 			isa = PBXGroup;
 			children = (
 				B5798B9B25B7C0B6005EE93E /* SimpleNotes.app */,
+				B5A3FDA525C0D5FA00FD12D2 /* SimpleNoteWidgetExtension.appex */,
+				B5D2D34425C1FD7B00A72A53 /* DynamicNotesList.appex */,
+				B5D2D34E25C1FD7B00A72A53 /* DynamicNotesListUI.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -92,11 +227,13 @@
 		B5798B9D25B7C0B6005EE93E /* SimpleNotes */ = {
 			isa = PBXGroup;
 			children = (
+				B55F8CE525CA092E00FCAD95 /* Assets.xcassets */,
+				B5798B9E25B7C0B6005EE93E /* SimpleNotesApp.swift */,
+				B5798BF025BA1CC4005EE93E /* SimpleNotes.entitlements */,
+				B5798BBA25B7C9C6005EE93E /* View */,
 				B5798BD825B87CD7005EE93E /* Utilities */,
 				B5798BC825B7E8F2005EE93E /* ViewModel */,
-				B5798BBA25B7C9C6005EE93E /* View */,
 				B5798BB325B7C109005EE93E /* Model */,
-				B5798BA225B7C0B7005EE93E /* Assets.xcassets */,
 				B5798BA725B7C0B7005EE93E /* Persistence.swift */,
 				B5798BAC25B7C0B7005EE93E /* Info.plist */,
 				B5798BA425B7C0B7005EE93E /* Preview Content */,
@@ -115,6 +252,7 @@
 		B5798BB325B7C109005EE93E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				B5798BFA25BA26C3005EE93E /* NoteCoreData.xcdatamodeld */,
 				B5798BB425B7C118005EE93E /* NoteM.swift */,
 			);
 			path = Model;
@@ -124,9 +262,9 @@
 			isa = PBXGroup;
 			children = (
 				B5798BE425B88CEC005EE93E /* SubViews */,
-				B5798BA025B7C0B6005EE93E /* NoteFoldersListView.swift */,
-				B5798B9E25B7C0B6005EE93E /* SimpleNotesApp.swift */,
+				B5798BA025B7C0B6005EE93E /* ListNoteFolders.swift */,
 				B5798BBC25B7E078005EE93E /* CreateEditNote.swift */,
+				B55F8CEB25CA0CB900FCAD95 /* UserPreferences.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -135,6 +273,7 @@
 			isa = PBXGroup;
 			children = (
 				B5798BD125B7EEE8005EE93E /* NoteStore.swift */,
+				B5798BED25BA09B1005EE93E /* NoteEditVM.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -143,6 +282,9 @@
 			isa = PBXGroup;
 			children = (
 				B5798BD925B87CEB005EE93E /* BindingPreview.swift */,
+				B55F8CFC25CA26C100FCAD95 /* SytaxtHighlighingTextStorage.swift */,
+				B5798BEA25BA0172005EE93E /* Extensions.swift */,
+				B592C5FF25BA4B4A00E12374 /* LongPress.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -150,9 +292,50 @@
 		B5798BE425B88CEC005EE93E /* SubViews */ = {
 			isa = PBXGroup;
 			children = (
-				B5798BE125B88CE9005EE93E /* RichTextEditor.swift */,
+				B592C66925BF89E600E12374 /* SNASButton.swift */,
+				B5E86C7325C21DAA00C09CBB /* DummyItem.swift */,
+				B55F8CF125CA0DAF00FCAD95 /* UIFontFamilyPicker.swift */,
+				B55F8D0225CA277100FCAD95 /* RichEditorRepresentable.swift */,
 			);
 			path = SubViews;
+			sourceTree = "<group>";
+		};
+		B5A3FDAA25C0D5FB00FD12D2 /* SimpleNoteWidget */ = {
+			isa = PBXGroup;
+			children = (
+				B5A3FDAB25C0D5FB00FD12D2 /* SimpleNoteWidget.swift */,
+				B5A3FDAE25C0D5FC00FD12D2 /* Assets.xcassets */,
+				B5A3FDB025C0D5FD00FD12D2 /* Info.plist */,
+				B5A3FDF925C1F22F00FD12D2 /* SimpleNotesWidgetConfiguration.intentdefinition */,
+			);
+			path = SimpleNoteWidget;
+			sourceTree = "<group>";
+		};
+		B5D2D34625C1FD7B00A72A53 /* DynamicNotesList */ = {
+			isa = PBXGroup;
+			children = (
+				B5E86C6E25C20AD300C09CBB /* DynamicNotesList.entitlements */,
+				B5D2D34725C1FD7B00A72A53 /* IntentHandler.swift */,
+				B5D2D34925C1FD7B00A72A53 /* Info.plist */,
+			);
+			path = DynamicNotesList;
+			sourceTree = "<group>";
+		};
+		B5D2D35025C1FD7B00A72A53 /* DynamicNotesListUI */ = {
+			isa = PBXGroup;
+			children = (
+				B5D2D35125C1FD7B00A72A53 /* IntentViewController.swift */,
+				B5D2D35325C1FD7B00A72A53 /* MainInterface.storyboard */,
+				B5D2D35625C1FD7B00A72A53 /* Info.plist */,
+			);
+			path = DynamicNotesListUI;
+			sourceTree = "<group>";
+		};
+		FAAD34CE0752E8334007FF0D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -162,24 +345,74 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B5798BAF25B7C0B7005EE93E /* Build configuration list for PBXNativeTarget "SimpleNotes" */;
 			buildPhases = (
-				4D6C71D8932DE4CD91178D42 /* [CP] Check Pods Manifest.lock */,
 				B5798B9725B7C0B6005EE93E /* Sources */,
 				B5798B9825B7C0B6005EE93E /* Frameworks */,
 				B5798B9925B7C0B6005EE93E /* Resources */,
-				33CB9A76C2A12D79A626DA64 /* [CP] Embed Pods Frameworks */,
+				B592C66525BD012800E12374 /* Embed Watch Content */,
+				B5A3FDB925C0D5FD00FD12D2 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B5A3FDB425C0D5FD00FD12D2 /* PBXTargetDependency */,
+				B5D2D35825C1FD7B00A72A53 /* PBXTargetDependency */,
+				B5D2D35B25C1FD7B00A72A53 /* PBXTargetDependency */,
+			);
+			name = SimpleNotes;
+			productName = SimpleNotes;
+			productReference = B5798B9B25B7C0B6005EE93E /* SimpleNotes.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B5A3FDA425C0D5FA00FD12D2 /* SimpleNoteWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B5A3FDB625C0D5FD00FD12D2 /* Build configuration list for PBXNativeTarget "SimpleNoteWidgetExtension" */;
+			buildPhases = (
+				B5A3FDA125C0D5FA00FD12D2 /* Sources */,
+				B5A3FDA225C0D5FA00FD12D2 /* Frameworks */,
+				B5A3FDA325C0D5FA00FD12D2 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = SimpleNotes;
-			packageProductDependencies = (
-				B5798BC125B7E701005EE93E /* RealmSwift */,
-				B5798BC325B7E701005EE93E /* Realm */,
+			name = SimpleNoteWidgetExtension;
+			productName = SimpleNoteWidgetExtension;
+			productReference = B5A3FDA525C0D5FA00FD12D2 /* SimpleNoteWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		B5D2D34325C1FD7B00A72A53 /* DynamicNotesList */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B5D2D36025C1FD7B00A72A53 /* Build configuration list for PBXNativeTarget "DynamicNotesList" */;
+			buildPhases = (
+				B5D2D34025C1FD7B00A72A53 /* Sources */,
+				B5D2D34125C1FD7B00A72A53 /* Frameworks */,
+				B5D2D34225C1FD7B00A72A53 /* Resources */,
 			);
-			productName = SimpleNotes;
-			productReference = B5798B9B25B7C0B6005EE93E /* SimpleNotes.app */;
-			productType = "com.apple.product-type.application";
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DynamicNotesList;
+			productName = DynamicNotesList;
+			productReference = B5D2D34425C1FD7B00A72A53 /* DynamicNotesList.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		B5D2D34D25C1FD7B00A72A53 /* DynamicNotesListUI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B5D2D35D25C1FD7B00A72A53 /* Build configuration list for PBXNativeTarget "DynamicNotesListUI" */;
+			buildPhases = (
+				B5D2D34A25C1FD7B00A72A53 /* Sources */,
+				B5D2D34B25C1FD7B00A72A53 /* Frameworks */,
+				B5D2D34C25C1FD7B00A72A53 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DynamicNotesListUI;
+			productName = DynamicNotesListUI;
+			productReference = B5D2D34E25C1FD7B00A72A53 /* DynamicNotesListUI.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -191,6 +424,15 @@
 				LastUpgradeCheck = 1230;
 				TargetAttributes = {
 					B5798B9A25B7C0B6005EE93E = {
+						CreatedOnToolsVersion = 12.3;
+					};
+					B5A3FDA425C0D5FA00FD12D2 = {
+						CreatedOnToolsVersion = 12.3;
+					};
+					B5D2D34325C1FD7B00A72A53 = {
+						CreatedOnToolsVersion = 12.3;
+					};
+					B5D2D34D25C1FD7B00A72A53 = {
 						CreatedOnToolsVersion = 12.3;
 					};
 				};
@@ -205,13 +447,16 @@
 			);
 			mainGroup = B5798B9225B7C0B6005EE93E;
 			packageReferences = (
-				B5798BC025B7E701005EE93E /* XCRemoteSwiftPackageReference "realm-cocoa" */,
+				B5798BC025B7E701005EE93E /* RemoteSwiftPackageReference */,
 			);
 			productRefGroup = B5798B9C25B7C0B6005EE93E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				B5798B9A25B7C0B6005EE93E /* SimpleNotes */,
+				B5A3FDA425C0D5FA00FD12D2 /* SimpleNoteWidgetExtension */,
+				B5D2D34325C1FD7B00A72A53 /* DynamicNotesList */,
+				B5D2D34D25C1FD7B00A72A53 /* DynamicNotesListUI */,
 			);
 		};
 /* End PBXProject section */
@@ -221,72 +466,130 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B55F8CE625CA092E00FCAD95 /* Assets.xcassets in Resources */,
 				B5798BA625B7C0B7005EE93E /* Preview Assets.xcassets in Resources */,
-				B5798BA325B7C0B7005EE93E /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5A3FDA325C0D5FA00FD12D2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5A3FDAF25C0D5FD00FD12D2 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5D2D34225C1FD7B00A72A53 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5D2D34C25C1FD7B00A72A53 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5D2D35525C1FD7B00A72A53 /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		33CB9A76C2A12D79A626DA64 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SimpleNotes/Pods-SimpleNotes-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SimpleNotes/Pods-SimpleNotes-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SimpleNotes/Pods-SimpleNotes-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		4D6C71D8932DE4CD91178D42 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-SimpleNotes-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B5798B9725B7C0B6005EE93E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B55F8CFD25CA26C100FCAD95 /* SytaxtHighlighingTextStorage.swift in Sources */,
+				B592C66A25BF89E600E12374 /* SNASButton.swift in Sources */,
 				B5798BB525B7C118005EE93E /* NoteM.swift in Sources */,
+				B55F8CF225CA0DAF00FCAD95 /* UIFontFamilyPicker.swift in Sources */,
+				B55F8CEC25CA0CB900FCAD95 /* UserPreferences.swift in Sources */,
+				B5798BEB25BA0172005EE93E /* Extensions.swift in Sources */,
+				B5E86C7425C21DAA00C09CBB /* DummyItem.swift in Sources */,
+				B5798BFC25BA26C3005EE93E /* NoteCoreData.xcdatamodeld in Sources */,
+				B55F8D0325CA277100FCAD95 /* RichEditorRepresentable.swift in Sources */,
+				B5798BEE25BA09B1005EE93E /* NoteEditVM.swift in Sources */,
 				B5798BA825B7C0B7005EE93E /* Persistence.swift in Sources */,
-				B5798BA125B7C0B6005EE93E /* NoteFoldersListView.swift in Sources */,
+				B5798BA125B7C0B6005EE93E /* ListNoteFolders.swift in Sources */,
+				B5A3FDFA25C1F22F00FD12D2 /* SimpleNotesWidgetConfiguration.intentdefinition in Sources */,
 				B5798BD225B7EEE8005EE93E /* NoteStore.swift in Sources */,
 				B5798B9F25B7C0B6005EE93E /* SimpleNotesApp.swift in Sources */,
 				B5798BDA25B87CEB005EE93E /* BindingPreview.swift in Sources */,
 				B5798BBD25B7E078005EE93E /* CreateEditNote.swift in Sources */,
-				B5798BE225B88CE9005EE93E /* RichTextEditor.swift in Sources */,
+				B592C60025BA4B4A00E12374 /* LongPress.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5A3FDA125C0D5FA00FD12D2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5A3FDBC25C0DA4500FD12D2 /* NoteStore.swift in Sources */,
+				B5E86C5D25C2081C00C09CBB /* SimpleNoteWidget.swift in Sources */,
+				B5A3FDFB25C1F22F00FD12D2 /* SimpleNotesWidgetConfiguration.intentdefinition in Sources */,
+				B5A3FDBF25C0DA5400FD12D2 /* Persistence.swift in Sources */,
+				B5A3FDC225C0DA6F00FD12D2 /* NoteCoreData.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5D2D34025C1FD7B00A72A53 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5D2D37E25C1FD9900A72A53 /* NoteStore.swift in Sources */,
+				B5D2D34825C1FD7B00A72A53 /* IntentHandler.swift in Sources */,
+				B5D2D38D25C1FD9E00A72A53 /* NoteCoreData.xcdatamodeld in Sources */,
+				B5D2D36925C1FD8300A72A53 /* SimpleNotesWidgetConfiguration.intentdefinition in Sources */,
+				B5D2D38E25C1FDA000A72A53 /* Persistence.swift in Sources */,
+				B5E86C5C25C2081B00C09CBB /* SimpleNoteWidget.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5D2D34A25C1FD7B00A72A53 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5D2D38325C1FD9900A72A53 /* NoteStore.swift in Sources */,
+				B5D2D35225C1FD7B00A72A53 /* IntentViewController.swift in Sources */,
+				B5D2D38825C1FD9E00A72A53 /* NoteCoreData.xcdatamodeld in Sources */,
+				B5D2D37925C1FD9400A72A53 /* SimpleNotesWidgetConfiguration.intentdefinition in Sources */,
+				B5D2D39325C1FDA000A72A53 /* Persistence.swift in Sources */,
+				B5E86C5725C2081B00C09CBB /* SimpleNoteWidget.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B5A3FDB425C0D5FD00FD12D2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B5A3FDA425C0D5FA00FD12D2 /* SimpleNoteWidgetExtension */;
+			targetProxy = B5A3FDB325C0D5FD00FD12D2 /* PBXContainerItemProxy */;
+		};
+		B5D2D35825C1FD7B00A72A53 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B5D2D34D25C1FD7B00A72A53 /* DynamicNotesListUI */;
+			targetProxy = B5D2D35725C1FD7B00A72A53 /* PBXContainerItemProxy */;
+		};
+		B5D2D35B25C1FD7B00A72A53 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B5D2D34325C1FD7B00A72A53 /* DynamicNotesList */;
+			targetProxy = B5D2D35A25C1FD7B00A72A53 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B5D2D35325C1FD7B00A72A53 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B5D2D35425C1FD7B00A72A53 /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		B5798BAD25B7C0B7005EE93E /* Debug */ = {
@@ -407,10 +710,11 @@
 		};
 		B5798BB025B7C0B7005EE93E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2281ABA0CF6A868455035880 /* Pods-SimpleNotes.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SimpleNotes/SimpleNotes.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"SimpleNotes/Preview Content\"";
 				DEVELOPMENT_TEAM = 3463GQXGTB;
@@ -430,10 +734,11 @@
 		};
 		B5798BB125B7C0B7005EE93E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6CF97D5BE926B4FB3BB115D4 /* Pods-SimpleNotes.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SimpleNotes/SimpleNotes.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"SimpleNotes/Preview Content\"";
 				DEVELOPMENT_TEAM = 3463GQXGTB;
@@ -446,6 +751,128 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.lozzoc.SimpleNotes;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		B5A3FDB725C0D5FD00FD12D2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = SimpleNoteWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3463GQXGTB;
+				INFOPLIST_FILE = SimpleNoteWidget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.lozzoc.SimpleNotes.SimpleNoteWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B5A3FDB825C0D5FD00FD12D2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = SimpleNoteWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3463GQXGTB;
+				INFOPLIST_FILE = SimpleNoteWidget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.lozzoc.SimpleNotes.SimpleNoteWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		B5D2D35E25C1FD7B00A72A53 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3463GQXGTB;
+				INFOPLIST_FILE = DynamicNotesListUI/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.lozzoc.SimpleNotes.DynamicNotesListUI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B5D2D35F25C1FD7B00A72A53 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3463GQXGTB;
+				INFOPLIST_FILE = DynamicNotesListUI/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.lozzoc.SimpleNotes.DynamicNotesListUI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		B5D2D36125C1FD7B00A72A53 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = DynamicNotesList/DynamicNotesList.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3463GQXGTB;
+				INFOPLIST_FILE = DynamicNotesList/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.lozzoc.SimpleNotes.DynamicNotesList;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B5D2D36225C1FD7B00A72A53 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = DynamicNotesList/DynamicNotesList.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3463GQXGTB;
+				INFOPLIST_FILE = DynamicNotesList/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.lozzoc.SimpleNotes.DynamicNotesList;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -472,10 +899,37 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		B5A3FDB625C0D5FD00FD12D2 /* Build configuration list for PBXNativeTarget "SimpleNoteWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B5A3FDB725C0D5FD00FD12D2 /* Debug */,
+				B5A3FDB825C0D5FD00FD12D2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B5D2D35D25C1FD7B00A72A53 /* Build configuration list for PBXNativeTarget "DynamicNotesListUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B5D2D35E25C1FD7B00A72A53 /* Debug */,
+				B5D2D35F25C1FD7B00A72A53 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B5D2D36025C1FD7B00A72A53 /* Build configuration list for PBXNativeTarget "DynamicNotesList" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B5D2D36125C1FD7B00A72A53 /* Debug */,
+				B5D2D36225C1FD7B00A72A53 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		B5798BC025B7E701005EE93E /* XCRemoteSwiftPackageReference "realm-cocoa" */ = {
+		B5798BC025B7E701005EE93E /* RemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "http://github.com/realm/realm-cocoa.git";
 			requirement = {
@@ -485,18 +939,18 @@
 		};
 /* End XCRemoteSwiftPackageReference section */
 
-/* Begin XCSwiftPackageProductDependency section */
-		B5798BC125B7E701005EE93E /* RealmSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B5798BC025B7E701005EE93E /* XCRemoteSwiftPackageReference "realm-cocoa" */;
-			productName = RealmSwift;
+/* Begin XCVersionGroup section */
+		B5798BFA25BA26C3005EE93E /* NoteCoreData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B5798BFB25BA26C3005EE93E /* NoteCoreData.xcdatamodel */,
+			);
+			currentVersion = B5798BFB25BA26C3005EE93E /* NoteCoreData.xcdatamodel */;
+			path = NoteCoreData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
 		};
-		B5798BC325B7E701005EE93E /* Realm */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B5798BC025B7E701005EE93E /* XCRemoteSwiftPackageReference "realm-cocoa" */;
-			productName = Realm;
-		};
-/* End XCSwiftPackageProductDependency section */
+/* End XCVersionGroup section */
 	};
 	rootObject = B5798B9325B7C0B6005EE93E /* Project object */;
 }

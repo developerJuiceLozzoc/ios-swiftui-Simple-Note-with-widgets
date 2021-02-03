@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17709" systemVersion="20C69" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Entity" representedClassName="Entity" syncable="YES" codeGenerationType="class"/>
+    <entity name="Folder" representedClassName=".Folder" syncable="YES" codeGenerationType="class">
+        <attribute name="name" attributeType="String" defaultValueString="Basic Folder Name"/>
+        <relationship name="notes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Note" inverseName="parentFolder" inverseEntity="Note"/>
+    </entity>
+    <entity name="Note" representedClassName=".Note" syncable="YES" codeGenerationType="class">
+        <attribute name="body" attributeType="String" defaultValueString=""/>
+        <attribute name="dateEdited" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="id" attributeType="String" defaultValueString=""/>
+        <attribute name="title" attributeType="String" defaultValueString=""/>
+        <relationship name="parentFolder" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Folder" inverseName="notes" inverseEntity="Folder"/>
+    </entity>
+    <configuration name="Cloud">
+        <memberEntity name="Note"/>
+        <memberEntity name="Folder"/>
+    </configuration>
+    <elements>
+        <element name="Folder" positionX="-36" positionY="36" width="128" height="59"/>
+        <element name="Note" positionX="-54" positionY="-9" width="128" height="104"/>
+        <element name="Entity" positionX="-27" positionY="54" width="128" height="29"/>
+    </elements>
+</model>

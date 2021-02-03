@@ -6,21 +6,34 @@
 //
 
 import SwiftUI
-import RealmSwift
-//import
 
+var initalsring = """
 
+ this is a very long string
+intenedd to take up multiple lines and also have
+manually
+inserted line breaks to wrap around the phone screen.
+"""
 
 struct CreateEditNote: View {
     @EnvironmentObject var store: NoteStore
-    @State var notecontent: String = ""
-    var note: Note? = nil
+    var thenoteVM: NoteEditVM!
+    
+    var nativeTE: RichEditorRepresentable!
     @Binding var isEditing: Bool
+    
+    
     var simpleDate: String {
         let d = Date()
         let df = DateFormatter()
-        df.dateFormat = "MMMM DD, YYYY  mm:hh at "
+        df.dateFormat = "MMMM DD, YYYY  hh:mm at "
         return df.string(from: d)
+    }
+    
+    init(initialNote: Note?, isEditing: Binding<Bool>) {
+        thenoteVM = NoteEditVM(with: initialNote)
+        nativeTE = RichEditorRepresentable(bounds: UIScreen.main.bounds.size, delegate: thenoteVM)
+        self._isEditing = isEditing
     }
    
     var body: some View {
@@ -29,27 +42,34 @@ struct CreateEditNote: View {
                 Spacer()
                 Text("\(simpleDate)").font(.caption)
                 Spacer()
-            }
-            RichTextEditor(text: $notecontent, initialText: note)
+            }.padding()
+            nativeTE
+
+            Spacer()
+            
         }
+        .onAppear(perform: {
+            thenoteVM.delegate = store
+        })
+        .onDisappear(perform: {
+            if nativeTE.textStorage.backingStore.string.count > 0 {
+                thenoteVM.notecontent = nativeTE.textStorage.backingStore.string
+                thenoteVM.saveOrCreate()
+            }
+        })
         .padding()
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
                 Button(action: {
-                    if let editingThis = note {
-                        store.updateNote(with: notecontent, ref: editingThis)
-                    }
-                    else{
-                        store.addNoteToModel(with: notecontent)
-                    }
-                    
-                    isEditing.toggle()
+                    print(thenoteVM.notecontent)
+
                 }, label: {
                     Text("Done")
                 })
             }
         }
     }
+   
     
     
 }
@@ -57,7 +77,10 @@ struct CreateEditNote: View {
 struct CreateEditNote_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView{
-            StatefulPreviewWrapper(false) { CreateEditNote(isEditing: $0) }
+            StatefulPreviewWrapper(false) { CreateEditNote(initialNote: nil, isEditing: $0)
+                .environmentObject(NoteStore())
+
+            }
         }
     }
 }
