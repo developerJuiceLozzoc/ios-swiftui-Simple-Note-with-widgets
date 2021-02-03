@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -450,7 +450,6 @@
 			);
 			mainGroup = B5798B9225B7C0B6005EE93E;
 			packageReferences = (
-				B5798BC025B7E701005EE93E /* XCRemoteSwiftPackageReference "realm-cocoa" */,
 			);
 			productRefGroup = B5798B9C25B7C0B6005EE93E /* Products */;
 			projectDirPath = "";
@@ -935,17 +934,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		B5798BC025B7E701005EE93E /* XCRemoteSwiftPackageReference "realm-cocoa" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "http://github.com/realm/realm-cocoa.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 10.5.1;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCVersionGroup section */
 		B5798BFA25BA26C3005EE93E /* NoteCoreData.xcdatamodeld */ = {
