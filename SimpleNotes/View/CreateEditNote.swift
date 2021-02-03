@@ -24,7 +24,7 @@ struct CreateEditNote: View {
     var u_pref_color: CGColor {
         if let defaults = UserDefaults(suiteName: "group.com.lozzoc.SimpleNotes") {
         
-            if let components: [ CGFloat ] = defaults.array(forKey: "NOTES_BG_COLOR") as? [CGFloat], components.count == 4 {
+            if let components: [ CGFloat ] = defaults.array(forKey: USER_PREF_COLOR) as? [CGFloat], components.count == 4 {
                  return ExtColor(displayP3Red: components[0], green: components[1], blue: components[2], alpha: components[3]).cgColor
             } else {
                 return ExtColor.white.cgColor
@@ -52,19 +52,14 @@ struct CreateEditNote: View {
     }
    
     var body: some View {
-        VStack{
-            HStack{
-                Spacer()
-                Text("\(simpleDate)").font(.caption)
-                Spacer()
-            }.padding()
-            nativeTextEditor
-                
+    
+        nativeTextEditor
+            .edgesIgnoringSafeArea(.all)
 
-            Spacer()
-            
-        }
         .onAppear(perform: {
+//            UIToolbar.appearance().barTintColor = ExtColor(cgColor: u_pref_color)
+//            UINavigationBar.appearance().backgroundColor =
+//            ExtColor(cgColor: u_pref_color)
             thenoteVM.delegate = store
             nativeTextEditor.textView.backgroundColor = ExtColor(cgColor: u_pref_color)
 
@@ -77,6 +72,9 @@ struct CreateEditNote: View {
         })
         .padding()
         .toolbar {
+            ToolbarItem(placement: .principal){
+                Text("\(simpleDate)").font(.caption)
+            }
             ToolbarItem(placement: .navigationBarTrailing) {
                 Button(action: {
                     nativeTextEditor.textView.resignFirstResponder()

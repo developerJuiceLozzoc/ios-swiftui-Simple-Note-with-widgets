@@ -11,7 +11,6 @@ import SwiftUI
 @main
 struct SimpleNotesApp: App {
     let persistenceController = PersistenceController.shared
-    @State var deepLinkNote: String? = nil
     var font: String
     
     init(){
@@ -19,7 +18,7 @@ struct SimpleNotesApp: App {
             font = "Arial"
             return
         }
-        guard let globalfont: String = defaults.string(forKey: "NOTES_FONT_FAMILY") else {
+        guard let globalfont: String = defaults.string(forKey: USER_PREF_BODY) else {
             font = "Arial"
             return}
         self.font = globalfont
@@ -28,18 +27,11 @@ struct SimpleNotesApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ListNoteFolders(deepLink: $deepLinkNote)
+            ListNoteFolders()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
                 .environment(\.font, Font.custom(font, fixedSize: 20))
                 .environmentObject(NoteStore())
-                .onOpenURL(perform: { url in
-                    guard url.scheme == "com.lozzoc.SimpleNotes.SpecificNote" else {return}
-                    print(url.host!)
-                    print(url)
-                    print(url.path)
-
-                    deepLinkNote = nil
-                })
+                
         }
     }
     

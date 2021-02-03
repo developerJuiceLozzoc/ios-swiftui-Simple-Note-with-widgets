@@ -24,7 +24,6 @@ var testNote2: Note {
 
 struct ListNoteFolders: View {
     @EnvironmentObject var store: NoteStore
-    @Binding var deepLink: String?
     @State var showEditVie: Bool = false
     @State var showNoteModifierSheet: Bool = false
     @State var currentItem: Note?
@@ -40,7 +39,7 @@ var body: some View {
 //            DummyItem()
             ForEach(notes) { item in
                     HStack{
-                        Text("\(item.title!)").font(.body)
+                        Text("\(item.title!)")
                         Spacer()
                         Text("")
                         
@@ -52,7 +51,7 @@ var body: some View {
                         currentItem = item
                         showNoteModifierSheet.toggle()
                     }))
-        }
+            }
 
         }
         
@@ -128,20 +127,27 @@ ActionSheet(title: Text(""), message: nil,
 
             }
     //MARK: - View LifeCycle
-    }.onAppear(perform: {
-        print(NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).last! as String)
+    }
+    //MARK: OnOpenUrl
+    .onOpenURL(perform: { url in
+        guard url.scheme == "com.lozzoc.SimpleNotes.SpecificNote" else {return}
         
-        if let noteid = deepLink {
+        if let host = url.host {
+            print("DEEP onopenurl listnote: \(host)")
             let note = notes.first { (el) -> Bool in
-                return el.id == noteid
+                return el.id == host
             }
             currentItem = note
             showEditVie = true
         }
+    })
+    //MARK: onAppear
+    .onAppear(perform: {
+        print(NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).last! as String)
         
     })
+    //MARK: OnDisappear
     .onDisappear(perform: {
-        deepLink = nil
         currentItem = nil
     })
     
@@ -154,9 +160,9 @@ struct ListNoteFolders_Previews: PreviewProvider {
 
     static var previews: some View {
      
-        StatefulPreviewWrapper("") {
-            ListNoteFolders( deepLink:  $0)
+       
+            ListNoteFolders()
                   .environmentObject(NoteStore())
-        }
+
     }
 }

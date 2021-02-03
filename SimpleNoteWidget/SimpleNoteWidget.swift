@@ -48,17 +48,36 @@ struct SimpleEntry: TimelineEntry {
 
 struct SimpleNoteWidgetEntryView : View {
     var entry: Provider.Entry
+    @State var color: CGColor = Color.white.cgColor!
+    @State var bodyFamilyChosen: UIFont =  UIFont.preferredFont(forTextStyle: .body)
+    @State var titleFamilyChosen: UIFont = UIFont.preferredFont(forTextStyle: .title2)
 
     var body: some View {
-        VStack{
+        VStack(spacing: 0){
             HStack{
                 Text(entry.configuration.shortNoteInfo?.displayString ?? "No note set")
-                    .padding()
-                    .font(.title3)
-                Spacer()
+                    .font(Font(titleFamilyChosen))
             }
             Text(entry.configuration.shortNoteInfo?.body ?? "No Body")
-            Spacer()
+                .font(Font(bodyFamilyChosen))
+                .padding()
+        }
+        .edgesIgnoringSafeArea(.all)
+        .background(Color(color))
+        .onAppear {
+            guard let defaults = UserDefaults(suiteName: "group.com.lozzoc.SimpleNotes") else {return }
+            if let components: [ CGFloat ] = defaults.array(forKey: USER_PREF_COLOR ) as? [CGFloat], components.count == 4 {
+                color = ExtColor(displayP3Red: components[0], green: components[1], blue: components[2], alpha: components[3]).cgColor
+           }
+
+            if let bodyFontName = defaults.string(forKey: USER_PREF_BODY) {
+                let bfontDescriptor =  UIFontDescriptor().withFamily(bodyFontName)
+                bodyFamilyChosen = UIFont(descriptor: bfontDescriptor, size: 15)
+            }
+            if let titleFontName = defaults.string(forKey: USER_PREF_TITLE) {
+                let tfontDescriptor =  UIFontDescriptor().withFamily(titleFontName)
+                titleFamilyChosen = UIFont(descriptor: tfontDescriptor, size: 15)
+            }
         }
     }
 }

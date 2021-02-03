@@ -8,7 +8,9 @@
 import UIKit
 
 class SytaxtHighlighingTextStorage: NSTextStorage {
-    var fontDescriptor: UIFontDescriptor?
+    var tfontDescriptor: UIFontDescriptor?
+    var bfontDescriptor: UIFontDescriptor?
+    
     let backingStore = NSMutableAttributedString()
     var titleFormated: Bool = false
     override var string: String {
@@ -41,16 +43,27 @@ class SytaxtHighlighingTextStorage: NSTextStorage {
     
     
     func applyStylesToRange(searchRange: NSRange) {
-      
-        guard let familyDescriptor = self.fontDescriptor else {return}
-       
-        let boldFontDescriptor = familyDescriptor.withSymbolicTraits(.traitBold)
         
+        var titleFont: UIFont
+        var normFont: UIFont
+
+        if let tDescriptor = self.tfontDescriptor {
+            guard let fromSymbol = tDescriptor.withSymbolicTraits(.traitBold) else { return}
+            titleFont = UIFont(descriptor: fromSymbol, size: 32)
+        }
+        else {
+            titleFont = UIFont.preferredFont(forTextStyle: .title2)
+        }
         
-        let boldFont = UIFont(descriptor: boldFontDescriptor!, size: 20)
-        let normFont = UIFont(descriptor: familyDescriptor, size: 15)
+        if let bDescriptor = self.bfontDescriptor {
+            normFont = UIFont(descriptor: bDescriptor, size: 25)
+        }
+        else {
+            normFont = UIFont.preferredFont(forTextStyle: .body)
+        }
+        
         let normAttrs = [NSAttributedString.Key.font: normFont]
-        let boldAttributes = [NSAttributedString.Key.font: boldFont]
+        let boldAttributes = [NSAttributedString.Key.font: titleFont]
      
         if(searchRange.lowerBound > 0 && titleFormated == false) {
             // this means newline

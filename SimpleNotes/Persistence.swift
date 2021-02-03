@@ -30,12 +30,17 @@ struct PersistenceController {
         container.viewContext.automaticallyMergesChangesFromParent = true
         
         let cloud = NSPersistentStoreDescription(url:  storeURL)
+        cloud.cloudKitContainerOptions = NSPersistentCloudKitContainerOptions(containerIdentifier: "iCloud.com.lozzoc.SimpleNotes")
         container.persistentStoreDescriptions = [cloud]
         
         print(cloud)
+       
+//        let cloudURL = URL.storeURL(for: "iCloud.com.lozzoc.SimpleNotes", databaseName: "NoteCoreData")
+       
+//        let local = NSPersistentStoreDescription(url:  cloudURL)
 
-//        cloud.configuration = "Cloud"
-//        cloud.cloudKitContainerOptions = NSPersistentCloudKitContainerOptions(containerIdentifier: "iCloud.com.lozzoc.SimpleNotes")
+     
+       
 //        
 
         if inMemory {
