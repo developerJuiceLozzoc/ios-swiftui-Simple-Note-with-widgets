@@ -8,9 +8,9 @@
 import SwiftUI
 
 struct DummyItem: View {
-    @Binding var currentItem: Note?
-    @Binding var showEditVie: Bool
-    @Binding var showNoteModifierSheet: Bool
+    @State var currentItem: Note? = nil
+    @State var showEditVie: Bool = false
+    @State  var showNoteModifierSheet: Bool = false
 
     var body: some View {
         HStack{
@@ -29,8 +29,11 @@ struct DummyItem: View {
     }
 }
 //
-//struct DummyItem_Previews: PreviewProvider {
-//    static var previews: some View {
-//        DummyItem(currentItem: <#Binding<Note?>#>, showEditVie: <#Binding<Bool>#>, showNoteModifierSheet: <#Binding<Bool>#>)
-//    }
-//}
+struct DummyItem_Previews: PreviewProvider {
+    static var previews: some View {
+        NavigationView{
+             DummyItem()
+        }
+        
+    }
+}

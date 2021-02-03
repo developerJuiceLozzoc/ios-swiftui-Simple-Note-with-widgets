@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		B541BEB525CA700800A6C42B /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = B541BEB425CA700800A6C42B /* UserDefaults.swift */; };
-		B55F8CE625CA092E00FCAD95 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B55F8CE525CA092E00FCAD95 /* Assets.xcassets */; };
 		B55F8CEC25CA0CB900FCAD95 /* UserPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55F8CEB25CA0CB900FCAD95 /* UserPreferences.swift */; };
 		B55F8CFD25CA26C100FCAD95 /* SytaxtHighlighingTextStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55F8CFC25CA26C100FCAD95 /* SytaxtHighlighingTextStorage.swift */; };
 		B55F8D0325CA277100FCAD95 /* RichEditorRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55F8D0225CA277100FCAD95 /* RichEditorRepresentable.swift */; };
@@ -24,7 +23,6 @@
 		B5798BF325BA1CC8005EE93E /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5798BF225BA1CC8005EE93E /* CloudKit.framework */; };
 		B5798BFC25BA26C3005EE93E /* NoteCoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B5798BFA25BA26C3005EE93E /* NoteCoreData.xcdatamodeld */; };
 		B592C60025BA4B4A00E12374 /* LongPress.swift in Sources */ = {isa = PBXBuildFile; fileRef = B592C5FF25BA4B4A00E12374 /* LongPress.swift */; };
-		B592C66A25BF89E600E12374 /* SNASButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B592C66925BF89E600E12374 /* SNASButton.swift */; };
 		B5A3FDA725C0D5FA00FD12D2 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5A3FDA625C0D5FA00FD12D2 /* WidgetKit.framework */; };
 		B5A3FDA925C0D5FB00FD12D2 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5A3FDA825C0D5FA00FD12D2 /* SwiftUI.framework */; };
 		B5A3FDAF25C0D5FD00FD12D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5A3FDAE25C0D5FC00FD12D2 /* Assets.xcassets */; };
@@ -40,6 +38,7 @@
 		B5A41CAA25CB0DE6002DE76B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5798BEA25BA0172005EE93E /* Extensions.swift */; };
 		B5A41CAF25CB0DE6002DE76B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5798BEA25BA0172005EE93E /* Extensions.swift */; };
 		B5A41CB025CB0DE6002DE76B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5798BEA25BA0172005EE93E /* Extensions.swift */; };
+		B5A41CC625CB6AFE002DE76B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5A41CC525CB6AFE002DE76B /* Assets.xcassets */; };
 		B5D2D34525C1FD7B00A72A53 /* Intents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5B4E7DF25C1F9D200E389AF /* Intents.framework */; };
 		B5D2D34825C1FD7B00A72A53 /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D2D34725C1FD7B00A72A53 /* IntentHandler.swift */; };
 		B5D2D34F25C1FD7B00A72A53 /* IntentsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5B4E7EA25C1F9D200E389AF /* IntentsUI.framework */; };
@@ -113,7 +112,6 @@
 
 /* Begin PBXFileReference section */
 		B541BEB425CA700800A6C42B /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
-		B55F8CE525CA092E00FCAD95 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B55F8CEB25CA0CB900FCAD95 /* UserPreferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPreferences.swift; sourceTree = "<group>"; };
 		B55F8CFC25CA26C100FCAD95 /* SytaxtHighlighingTextStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SytaxtHighlighingTextStorage.swift; sourceTree = "<group>"; };
 		B55F8D0225CA277100FCAD95 /* RichEditorRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RichEditorRepresentable.swift; sourceTree = "<group>"; };
@@ -132,7 +130,6 @@
 		B5798BF225BA1CC8005EE93E /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		B5798BFB25BA26C3005EE93E /* NoteCoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NoteCoreData.xcdatamodel; sourceTree = "<group>"; };
 		B592C5FF25BA4B4A00E12374 /* LongPress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LongPress.swift; sourceTree = "<group>"; };
-		B592C66925BF89E600E12374 /* SNASButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SNASButton.swift; sourceTree = "<group>"; };
 		B5A3FDA525C0D5FA00FD12D2 /* SimpleNoteWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = SimpleNoteWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5A3FDA625C0D5FA00FD12D2 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		B5A3FDA825C0D5FA00FD12D2 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
@@ -140,6 +137,7 @@
 		B5A3FDAE25C0D5FC00FD12D2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B5A3FDB025C0D5FD00FD12D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B5A3FDF925C1F22F00FD12D2 /* SimpleNotesWidgetConfiguration.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = SimpleNotesWidgetConfiguration.intentdefinition; sourceTree = "<group>"; };
+		B5A41CC525CB6AFE002DE76B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B5B4E7DF25C1F9D200E389AF /* Intents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Intents.framework; path = System/Library/Frameworks/Intents.framework; sourceTree = SDKROOT; };
 		B5B4E7EA25C1F9D200E389AF /* IntentsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IntentsUI.framework; path = System/Library/Frameworks/IntentsUI.framework; sourceTree = SDKROOT; };
 		B5D2D34425C1FD7B00A72A53 /* DynamicNotesList.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = DynamicNotesList.appex; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -231,7 +229,6 @@
 		B5798B9D25B7C0B6005EE93E /* SimpleNotes */ = {
 			isa = PBXGroup;
 			children = (
-				B55F8CE525CA092E00FCAD95 /* Assets.xcassets */,
 				B5798B9E25B7C0B6005EE93E /* SimpleNotesApp.swift */,
 				B5798BF025BA1CC4005EE93E /* SimpleNotes.entitlements */,
 				B5798BBA25B7C9C6005EE93E /* View */,
@@ -265,6 +262,7 @@
 		B5798BBA25B7C9C6005EE93E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B5A41CC525CB6AFE002DE76B /* Assets.xcassets */,
 				B5798BE425B88CEC005EE93E /* SubViews */,
 				B5798BA025B7C0B6005EE93E /* ListNoteFolders.swift */,
 				B5798BBC25B7E078005EE93E /* CreateEditNote.swift */,
@@ -296,7 +294,6 @@
 		B5798BE425B88CEC005EE93E /* SubViews */ = {
 			isa = PBXGroup;
 			children = (
-				B592C66925BF89E600E12374 /* SNASButton.swift */,
 				B5E86C7325C21DAA00C09CBB /* DummyItem.swift */,
 				B55F8D0225CA277100FCAD95 /* RichEditorRepresentable.swift */,
 			);
@@ -468,7 +465,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B55F8CE625CA092E00FCAD95 /* Assets.xcassets in Resources */,
+				B5A41CC625CB6AFE002DE76B /* Assets.xcassets in Resources */,
 				B5798BA625B7C0B7005EE93E /* Preview Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -504,7 +501,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B55F8CFD25CA26C100FCAD95 /* SytaxtHighlighingTextStorage.swift in Sources */,
-				B592C66A25BF89E600E12374 /* SNASButton.swift in Sources */,
 				B55F8CEC25CA0CB900FCAD95 /* UserPreferences.swift in Sources */,
 				B5798BEB25BA0172005EE93E /* Extensions.swift in Sources */,
 				B5E86C7425C21DAA00C09CBB /* DummyItem.swift in Sources */,
