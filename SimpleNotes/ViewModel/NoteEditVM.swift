@@ -11,8 +11,7 @@ import SwiftUI
 class NoteEditVM {
     var notecontent: String = ""
     var note: Note? = nil
-    var titleHasBeenMade: Bool = false
-    var delegate: NoteStore!
+    var delegate: NoteStore?
     
     
     init(with initialNote: Note?){
@@ -20,6 +19,7 @@ class NoteEditVM {
     }
     
     func saveOrCreate(){
+        guard let delegate = delegate else {return}
         if let editingThis = note {
             delegate.updateNote(with: notecontent, ref: editingThis)
         }
@@ -28,8 +28,4 @@ class NoteEditVM {
         }
     }
 }
-    
-    
-extension NoteEditVM {
-    
-}
+ 

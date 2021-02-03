@@ -18,9 +18,23 @@ inserted line breaks to wrap around the phone screen.
 struct CreateEditNote: View {
     @EnvironmentObject var store: NoteStore
     var thenoteVM: NoteEditVM!
-    
-    var nativeTE: RichEditorRepresentable!
+    var nativeTextEditor: RichEditorRepresentable!
     @Binding var isEditing: Bool
+    
+    var u_pref_color: CGColor {
+        if let defaults = UserDefaults(suiteName: "group.com.lozzoc.SimpleNotes") {
+        
+            if let components: [ CGFloat ] = defaults.array(forKey: "NOTES_BG_COLOR") as? [CGFloat], components.count == 4 {
+                 return ExtColor(displayP3Red: components[0], green: components[1], blue: components[2], alpha: components[3]).cgColor
+            } else {
+                return ExtColor.white.cgColor
+
+            }
+
+        }else {
+            return ExtColor.white.cgColor
+        }
+    }
     
     
     var simpleDate: String {
@@ -32,7 +46,8 @@ struct CreateEditNote: View {
     
     init(initialNote: Note?, isEditing: Binding<Bool>) {
         thenoteVM = NoteEditVM(with: initialNote)
-        nativeTE = RichEditorRepresentable(bounds: UIScreen.main.bounds.size, delegate: thenoteVM)
+        nativeTextEditor = RichEditorRepresentable(bounds: UIScreen.main.bounds.size, delegate: thenoteVM)
+        nativeTextEditor.textView.layer.cornerRadius = 5
         self._isEditing = isEditing
     }
    
@@ -43,17 +58,20 @@ struct CreateEditNote: View {
                 Text("\(simpleDate)").font(.caption)
                 Spacer()
             }.padding()
-            nativeTE
+            nativeTextEditor
+                
 
             Spacer()
             
         }
         .onAppear(perform: {
             thenoteVM.delegate = store
+            nativeTextEditor.textView.backgroundColor = ExtColor(cgColor: u_pref_color)
+
         })
         .onDisappear(perform: {
-            if nativeTE.textStorage.backingStore.string.count > 0 {
-                thenoteVM.notecontent = nativeTE.textStorage.backingStore.string
+            if nativeTextEditor.textStorage.backingStore.string.count > 0 {
+                thenoteVM.notecontent = nativeTextEditor.textStorage.backingStore.string
                 thenoteVM.saveOrCreate()
             }
         })
@@ -61,8 +79,11 @@ struct CreateEditNote: View {
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
                 Button(action: {
-                    print(thenoteVM.notecontent)
-
+                    nativeTextEditor.textView.resignFirstResponder()
+                    if nativeTextEditor.textStorage.backingStore.string.count > 0 {
+                        thenoteVM.notecontent = nativeTextEditor.textStorage.backingStore.string
+                        thenoteVM.saveOrCreate()
+                    }
                 }, label: {
                     Text("Done")
                 })

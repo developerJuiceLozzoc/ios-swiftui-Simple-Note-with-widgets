@@ -8,9 +8,9 @@
 import SwiftUI
 
 struct UserPreferences: View {
-    @State var familyChosen: Int = 1
+    @State var familyChosen: Int = -1
     @State var fontName: String = ""
-    @State var color: CGColor = Color.gray.cgColor
+    @State var color: CGColor = ExtColor.gray.cgColor
     var fontlist: [String] {
         //compute array, each family must have bold varient
         return UIFont.familyNames.sorted()
@@ -43,24 +43,26 @@ struct UserPreferences: View {
         }.onDisappear {
             guard let defaults = UserDefaults(suiteName: "group.com.lozzoc.SimpleNotes") else {return }
             
-            if let colors = color.components {
-                defaults.setValue(colors, forKey: "NOTES_BG_COLOR")
+            if let clearcolor = color.copy(alpha: 0.2), let components = clearcolor.components , components.count == 4{
+                defaults.setValue(components, forKey: "NOTES_BG_COLOR")
                 
             }
+            guard familyChosen > -1 else {return}
             defaults.setValue(fontlist[familyChosen], forKey: "NOTES_FONT_FAMILY")
         }.onAppear(perform: {
             guard let defaults = UserDefaults(suiteName: "group.com.lozzoc.SimpleNotes") else {return }
             
             
-            guard let components: [ CGFloat ] = defaults.array(forKey: "NOTES_BG_COLOR") as? [CGFloat], components.count == 4 else {return}
-            color = Color(displayP3Red: components[0], green: components[1], blue: components[2], alpha: components[3]).cgColor
+           if let components: [ CGFloat ] = defaults.array(forKey: "NOTES_BG_COLOR") as? [CGFloat], components.count == 4 {
+            color = ExtColor(displayP3Red: components[0], green: components[1], blue: components[2], alpha: components[3]).cgColor
+           }
+            if let font: String = defaults.string(forKey: "NOTES_FONT_FAMILY") {
             
-            
-            
-            guard let font: String = defaults.string(forKey: "NOTES_FONT_FAMILY") else {return}
-            
-            fontName = font
-            self.familyChosen = fontlist.firstIndex(of: font)!
+                fontName = font
+                if(familyChosen == -1){
+                    familyChosen = fontlist.firstIndex(of: fontName)!
+                }
+            }
 
             
         })

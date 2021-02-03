@@ -122,6 +122,9 @@ ActionSheet(title: Text(""), message: nil,
                         })
                     
                 }
+            
+            
+                /* some devices do not have bottom toolbar*/
 
             }
     //MARK: - View LifeCycle

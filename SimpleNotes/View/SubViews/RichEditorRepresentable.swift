@@ -13,7 +13,7 @@ struct RichEditorRepresentable: UIViewRepresentable {
     let textStorage = SytaxtHighlighingTextStorage()
     typealias UIViewType = UITextView
     var fontname: String
-    
+    var textView: UITextView = UITextView(frame: .zero,textContainer: nil)
     
     var bounds: CGSize
     var delegate: NoteEditVM?
@@ -32,16 +32,51 @@ struct RichEditorRepresentable: UIViewRepresentable {
         else{
             fontname = "Arial"
         }
+        
+        self.textView = createTextView()
+        self.textStorage.fontDescriptor =  UIFontDescriptor().withFamily(fontname)
+        
+        if let _ = delegate?.note {
+            textStorage.titleFormated = true
+        }
+        
     }
     
     func makeUIView(context: Context) -> UITextView {
+        textView.delegate = context.coordinator
+        return textView
+    }
+    
+    func updateUIView(_ uiView: UITextView, context: Context) {
+        return
+    }
+    
+    func makeCoordinator() -> Coordinator {
+        Coordinator(self)
+    }
+    
+    
+    class Coordinator: NSObject, UITextViewDelegate {
+        let parent: RichEditorRepresentable
         
+        init(_ parent: RichEditorRepresentable){
+            self.parent = parent
+        }
+        
+        
+       
+    }
+    
+    
+    func createTextView() -> UITextView{
         
         let fontDescriptor = UIFontDescriptor().withFamily(fontname)
-        print(font)
-        let attrs = [NSAttributedString.Key.font: UIFont.preferredFont(forTextStyle: .body)]
         let boldFontDescriptor = fontDescriptor.withSymbolicTraits(.traitBold)
+        
+        
         let boldFont = UIFont(descriptor: boldFontDescriptor!, size: 20)
+        let normFont = UIFont(descriptor: fontDescriptor, size: 15)
+        let normAttrs = [NSAttributedString.Key.font: normFont]
         let boldAttributes = [NSAttributedString.Key.font: boldFont]
         
         let titleT = delegate?.note?.title ?? ""
@@ -50,7 +85,7 @@ struct RichEditorRepresentable: UIViewRepresentable {
         let combination = NSMutableAttributedString()
 
         let attrString = NSAttributedString(string: "\(titleT)\n", attributes: boldAttributes)
-        let attrString2 = NSAttributedString(string: "\(bodyT)", attributes: attrs)
+        let attrString2 = NSAttributedString(string: "\(bodyT)", attributes: normAttrs)
         if titleT.count > 0 {
             combination.append(attrString)
         }
@@ -71,31 +106,11 @@ struct RichEditorRepresentable: UIViewRepresentable {
           textStorage.addLayoutManager(layoutManager)
             
           // 4
-        var textView: UITextView
-          textView = UITextView(frame: newTextViewRect, textContainer: container)
-        textView.delegate = context.coordinator
+        var textViewt: UITextView = UITextView(frame: newTextViewRect,textContainer: container)
+ 
 
-        return textView
+        return textViewt
     }
-    
-    func updateUIView(_ uiView: UITextView, context: Context) {
-        return
-    }
-    
-    func makeCoordinator() -> Coordinator {
-        Coordinator(self)
-    }
-    
-    
-    class Coordinator: NSObject, UITextViewDelegate {
-        let parent: RichEditorRepresentable
-        init(_ parent: RichEditorRepresentable){
-            self.parent = parent
-        }
-        
-       
-    }
-    
 
    
 

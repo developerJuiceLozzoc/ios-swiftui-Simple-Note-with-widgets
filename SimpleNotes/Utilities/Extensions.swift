@@ -6,19 +6,20 @@
 // honorable mentions to this gist @ https://github.com/ultimatevegance/iOSStarterKit/blob/0e32229103984fcfaf31613e28698102b8e04616/StarterKit/iOSStarterKit/iOSStarterKit/Extension/Shared/ColorExtensions.swift
 //
 
+
 #if canImport(UIKit)
 import UIKit
-/// Color
-public typealias Color = UIColor
+/// ExtColor
+public typealias ExtColor = UIColor
 #endif
 
 #if canImport(Cocoa)
 import Cocoa
 /// Color
-public typealias Color = NSColor
+public typealias ExtColor = NSColor
 #endif
 
-extension Color {
+extension ExtColor {
     /// SwifterSwift: Hexadecimal value string (read-only).
     var hexString: String {
         let components: [Int] = {

@@ -22,19 +22,6 @@ public extension URL {
 struct PersistenceController {
     static let shared = PersistenceController()
 
-    static var preview: PersistenceController = {
-        let result = PersistenceController(inMemory: true)
-        let viewContext = result.container.viewContext
-        
-        do {
-            try viewContext.save()
-        } catch {
-            let nsError = error as NSError
-            fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
-        }
-        return result
-    }()
-
     let container: NSPersistentCloudKitContainer
 
     init(inMemory: Bool = false) {
@@ -44,6 +31,8 @@ struct PersistenceController {
         
         let cloud = NSPersistentStoreDescription(url:  storeURL)
         container.persistentStoreDescriptions = [cloud]
+        
+        print(cloud)
 
 //        cloud.configuration = "Cloud"
 //        cloud.cloudKitContainerOptions = NSPersistentCloudKitContainerOptions(containerIdentifier: "iCloud.com.lozzoc.SimpleNotes")

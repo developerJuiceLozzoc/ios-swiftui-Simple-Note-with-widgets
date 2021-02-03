@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		B55F8CE625CA092E00FCAD95 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B55F8CE525CA092E00FCAD95 /* Assets.xcassets */; };
 		B55F8CEC25CA0CB900FCAD95 /* UserPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55F8CEB25CA0CB900FCAD95 /* UserPreferences.swift */; };
-		B55F8CF225CA0DAF00FCAD95 /* UIFontFamilyPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55F8CF125CA0DAF00FCAD95 /* UIFontFamilyPicker.swift */; };
 		B55F8CFD25CA26C100FCAD95 /* SytaxtHighlighingTextStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55F8CFC25CA26C100FCAD95 /* SytaxtHighlighingTextStorage.swift */; };
 		B55F8D0325CA277100FCAD95 /* RichEditorRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55F8D0225CA277100FCAD95 /* RichEditorRepresentable.swift */; };
 		B5798B9F25B7C0B6005EE93E /* SimpleNotesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5798B9E25B7C0B6005EE93E /* SimpleNotesApp.swift */; };
@@ -109,7 +108,6 @@
 /* Begin PBXFileReference section */
 		B55F8CE525CA092E00FCAD95 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B55F8CEB25CA0CB900FCAD95 /* UserPreferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPreferences.swift; sourceTree = "<group>"; };
-		B55F8CF125CA0DAF00FCAD95 /* UIFontFamilyPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFontFamilyPicker.swift; sourceTree = "<group>"; };
 		B55F8CFC25CA26C100FCAD95 /* SytaxtHighlighingTextStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SytaxtHighlighingTextStorage.swift; sourceTree = "<group>"; };
 		B55F8D0225CA277100FCAD95 /* RichEditorRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RichEditorRepresentable.swift; sourceTree = "<group>"; };
 		B5798B9B25B7C0B6005EE93E /* SimpleNotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleNotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -294,7 +292,6 @@
 			children = (
 				B592C66925BF89E600E12374 /* SNASButton.swift */,
 				B5E86C7325C21DAA00C09CBB /* DummyItem.swift */,
-				B55F8CF125CA0DAF00FCAD95 /* UIFontFamilyPicker.swift */,
 				B55F8D0225CA277100FCAD95 /* RichEditorRepresentable.swift */,
 			);
 			path = SubViews;
@@ -447,7 +444,7 @@
 			);
 			mainGroup = B5798B9225B7C0B6005EE93E;
 			packageReferences = (
-				B5798BC025B7E701005EE93E /* RemoteSwiftPackageReference */,
+				B5798BC025B7E701005EE93E /* XCRemoteSwiftPackageReference "realm-cocoa" */,
 			);
 			productRefGroup = B5798B9C25B7C0B6005EE93E /* Products */;
 			projectDirPath = "";
@@ -504,7 +501,6 @@
 				B55F8CFD25CA26C100FCAD95 /* SytaxtHighlighingTextStorage.swift in Sources */,
 				B592C66A25BF89E600E12374 /* SNASButton.swift in Sources */,
 				B5798BB525B7C118005EE93E /* NoteM.swift in Sources */,
-				B55F8CF225CA0DAF00FCAD95 /* UIFontFamilyPicker.swift in Sources */,
 				B55F8CEC25CA0CB900FCAD95 /* UserPreferences.swift in Sources */,
 				B5798BEB25BA0172005EE93E /* Extensions.swift in Sources */,
 				B5E86C7425C21DAA00C09CBB /* DummyItem.swift in Sources */,
@@ -929,7 +925,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		B5798BC025B7E701005EE93E /* RemoteSwiftPackageReference */ = {
+		B5798BC025B7E701005EE93E /* XCRemoteSwiftPackageReference "realm-cocoa" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "http://github.com/realm/realm-cocoa.git";
 			requirement = {
