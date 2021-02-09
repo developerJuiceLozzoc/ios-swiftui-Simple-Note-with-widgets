@@ -31,13 +31,6 @@ struct RichNativeTextViewController: UIViewControllerRepresentable {
             return ExtColor.white.cgColor
         }
     }
-    var simpleDate: String {
-        let d = Date()
-        let df = DateFormatter()
-        df.dateFormat = "MMMM dd, YYYY  hh:mm at"
-        return df.string(from: d)
-    }
-   
 
 
     init(initialNote: Binding<Note?>, isEditing: Binding<Bool>, doneClicked: Binding<Bool>) {

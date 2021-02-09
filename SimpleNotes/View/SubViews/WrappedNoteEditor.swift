@@ -21,6 +21,12 @@ struct WrappedNoteEditor: View {
             rntvcDoneClicked.toggle()
         }
         .toolbar {
+            ToolbarItem(placement: .principal){ () -> Text in
+                let d = Date()
+                let df = DateFormatter()
+                df.dateFormat = "MMMM dd, YYYY  hh:mm at"
+                return Text(df.string(from: d)).font(.caption)
+            }
             ToolbarItem(placement: .navigationBarTrailing) {
                 Button(action: {
                     rntvcDoneClicked.toggle()
