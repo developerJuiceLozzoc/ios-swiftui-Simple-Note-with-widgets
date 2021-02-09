@@ -16,7 +16,7 @@ class IntentHandler: INExtension, NoteConfigurationIntentHandling {
         let tempStore = NoteStore()
         tempStore.loadAllNotesForChoose { results in
             
-            var notes: [NoteForWidget] = results.map { (el) in
+            let notes: [NoteForWidget] = results.map { (el) in
 
                 let note = NoteForWidget(identifier: el.id, display: el.title ?? "Empty Title")
                 note.body = el.body ?? "Empty Body"

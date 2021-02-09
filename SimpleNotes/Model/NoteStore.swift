@@ -31,18 +31,42 @@ extension NoteStore {
 
     }
     func loadAllNotesForChoose(completion: @escaping ([Note])->Void){
+            let context = PersistenceController.shared.container.viewContext
+
+        
+            let request: NSFetchRequest<Note> = Note.fetchRequest()
+            
+            print("about to fetch")
+            do{
+                completion(try context.fetch(request))
+            }
+            catch{
+                print(error.localizedDescription)
+                completion([])
+            }
+
+            
+    }
+    func fetchNoteDetail(id: String) -> Note? {
         let context = PersistenceController.shared.container.viewContext
 
     
         let request: NSFetchRequest<Note> = Note.fetchRequest()
-        
-        print("about to fetch")
+        let predicate = NSPredicate(format: "id MATCHES %@", id)
+
+        request.predicate = predicate
         do{
-            completion(try context.fetch(request))
+            let results = try context.fetch(request)
+            if results.count > 0 {
+                return results[0]
+            }
+            else {
+                return nil
+            }
         }
         catch{
             print(error.localizedDescription)
-            completion([])
+            return nil
         }
 
         
@@ -50,24 +74,17 @@ extension NoteStore {
     func saveNoteWidgetRef(with id: Double, ref noteid: String){
         
     }
-    func loadNoteForWidget(ref noteid: String){
-        let context = PersistenceController.shared.container.viewContext
-//        let categoryPredicate = NSPredicate(format: "parentCategory.name MATCHES %@", categoryRefOld!.name!)
-        let request: NSFetchRequest<Note> = Note.fetchRequest()
 
-        let requestCK = CKQuery(recordType: "Note", predicate: NSPredicate(value: true))
-    }
 
     
-    func addNoteToModel(with text: String){
-        guard text.count > 0 else {return}
+    func addNoteToModel(with text: String) -> Note?{
+        let trimmedString = text.trimmingCharacters(in: .whitespacesAndNewlines)
+        guard trimmedString.count > 0 else {return nil}
         self.objectWillChange.send()
         let context = PersistenceController.shared.container.viewContext
         
-        
-        print("adding new note",text)
-        
-        let items = text.split(separator: "\n", maxSplits: 1, omittingEmptySubsequences: true)
+            
+        let items = trimmedString.split(separator: "\n", maxSplits: 1, omittingEmptySubsequences: true)
         
         let newNote = Note(context: context)
         newNote.id = UUID().uuidString
@@ -78,13 +95,15 @@ extension NoteStore {
         else { newNote.body = "" }
         
         saveContext()
+        return newNote
 
     }
     
     func updateNote(with content: String, ref note: Note){
         self.objectWillChange.send()
         
-        let items = content.split(separator: "\n", maxSplits: 1, omittingEmptySubsequences: true)        
+        let items = content.split(separator: "\n", maxSplits: 1, omittingEmptySubsequences: true)
+        
         note.title = items[0].description
         note.dateEdited = Date().timeIntervalSince1970
 

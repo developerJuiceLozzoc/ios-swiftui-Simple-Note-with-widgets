@@ -10,20 +10,31 @@ import SwiftUI
 struct UserPreferences: View {
     @State var titleFamilyChosen: Int = -1
     @State var bodyFamilyChosen: Int = -1
-
     @State var fontName: String = ""
     @State var color: CGColor = ExtColor.gray.cgColor
+    
+    @State var bodyFontSize: Int = 24
+    @State var sample_text: String = "EZ Notes 😺"
+    
+    @State var sample_w_text: String = "Widgetz! 🤟"
+    @State var widgetFontSize: Int = 20
+
+    
     var fontlist: [String] {
         //compute array, each family must have bold varient
         var arr:[String] =  UIFont.familyNames.sorted()
             .filter{ family in
                     UIFont.fontNames(forFamilyName: family)
-                    .filter {varients in return varients.contains("Bold") }.count > 0
+                    .filter {varients in
+                        return varients.contains("Bold")
+                    }.count > 0
         }.map { $0 }
         arr.insert("Default", at: 0)
         return arr
         
     }
+    
+   
 
     
     var body: some View {
@@ -33,6 +44,7 @@ struct UserPreferences: View {
                 ColorPicker("Note Background Color", selection: $color)
                 
             }
+            //MARK: Font Family
             Section(header: Text("Font Family")){
                 HStack{
                     Text("Title Text Font-Style")
@@ -55,6 +67,41 @@ struct UserPreferences: View {
                         }
                
                     }
+                }
+            }
+            //MARK: Font Size
+            Section(header: Text("Note Font Size")){
+                Stepper("Font Size", onIncrement: {bodyFontSize += 4}, onDecrement: {bodyFontSize -= 4})
+                
+                HStack{
+                    Text("\(bodyFontSize)")
+                    Spacer()
+
+                    TextField("Sample Text", text: $sample_text)
+                        .frame(maxWidth: 125)
+                        .font(
+                            calculateFont(
+                                family: bodyFamilyChosen == -1 ? "Default" : fontlist[bodyFamilyChosen],
+                                size: bodyFontSize)
+                        )
+                    
+                }
+            }
+            Section(header: Text("Widget Font Size")){
+                Stepper("Font Size", onIncrement: {widgetFontSize += 4}, onDecrement: {widgetFontSize -= 4})
+                
+                HStack{
+                    Text("\(widgetFontSize)")
+                    Spacer()
+
+                    TextField("Sample Text", text: $sample_w_text)
+                        .frame(maxWidth: 125)
+                        .font(
+                            calculateFont(
+                                family: bodyFamilyChosen == -1 ? "Default" : fontlist[bodyFamilyChosen],
+                                size: widgetFontSize)
+                        )
+                    
                 }
             }
         }.toolbar {
@@ -82,12 +129,17 @@ struct UserPreferences: View {
                 defaults.setValue(fontlist[titleFamilyChosen], forKey: USER_PREF_TITLE)
             }
             
+            defaults.setValue(bodyFontSize, forKey: USER_PREF_NOTE_SIZE)
+            defaults.setValue(widgetFontSize, forKey: USER_PREF_WIDG_SIZE)
+            
+            
         }.onAppear(perform: {
             guard let defaults = UserDefaults(suiteName: "group.com.lozzoc.SimpleNotes") else {return }
             
             
            if let components: [ CGFloat ] = defaults.array(forKey: USER_PREF_COLOR) as? [CGFloat], components.count == 4 {
-            color = ExtColor(displayP3Red: components[0], green: components[1], blue: components[2], alpha: components[3]).cgColor
+            color = ExtColor(displayP3Red: components[0],
+                             green: components[1], blue: components[2], alpha: components[3]).cgColor
            }
 
             if let bodyFontName = defaults.string(forKey: USER_PREF_BODY) {
@@ -100,10 +152,19 @@ struct UserPreferences: View {
                     titleFamilyChosen = fontlist.firstIndex(of: titleFontName)!
                 }
             }
+            
+            if let bodySize = defaults.value(forKey: USER_PREF_NOTE_SIZE) as? Int {
+                bodyFontSize = bodySize
+            }
+            if let widgSize = defaults.value(forKey: USER_PREF_WIDG_SIZE) as? Int {
+                widgetFontSize = widgSize
+            }
 
             
         })
     }
+    
+    
 }
 
 struct SwiftUIView_Previews: PreviewProvider {

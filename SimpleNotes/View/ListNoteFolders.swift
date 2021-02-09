@@ -8,19 +8,6 @@
 import SwiftUI
 import CoreData
 
-var testNote1: Note {
-    let n = Note()
-    n.body = "Tacocats"
-    n.title = "Title 1"
-    return n
-}
-var testNote2: Note {
-    let n = Note()
-    n.body = "Tacocats"
-    n.title = "Title 2"
-    return n
-}
-
 
 struct ListNoteFolders: View {
     @EnvironmentObject var store: NoteStore
@@ -28,6 +15,8 @@ struct ListNoteFolders: View {
     @State var showNoteModifierSheet: Bool = false
     @State var currentItem: Note?
     @State var showUserPreferences: Bool = false
+    @State var rntvcDoneClicked: Bool = false
+    @State var bgColor: Color = .white
     
     @FetchRequest(entity: Note.entity(), sortDescriptors: [])
     var notes: FetchedResults<Note>
@@ -39,7 +28,7 @@ var body: some View {
 //            DummyItem()
             ForEach(notes) { item in
                     HStack{
-                        Text("\(item.title!)")
+                        Text("\(item.title ?? "OOPS, NO TITLE")")
                         Spacer()
                         Text("")
                         
@@ -54,6 +43,11 @@ var body: some View {
             }
 
         }
+        .onAppear {
+            bgColor = getBackgroundColor()
+        }
+
+//MARK: Navigation View stuff
         
 //MARK: -  action sheet
         .actionSheet(isPresented: $showNoteModifierSheet, content: {
@@ -69,7 +63,16 @@ ActionSheet(title: Text(""), message: nil,
         .background(
                NavigationLink(
                 destination:
-                    CreateEditNote(initialNote: currentItem, isEditing: $showEditVie).environmentObject(store),
+                    WrappedNoteEditor(currentItem: $currentItem,
+                                      showEditVie: $showEditVie,
+                                      rntvcDoneClicked: $rntvcDoneClicked,
+                                      bgColor: $bgColor,
+                                      findNoteWithID: { id in
+                                        return notes.first {
+                                            return $0.id == id
+                                        }
+                                      }
+                ),
                 isActive: $showEditVie) {
                  EmptyView()
                }
@@ -81,8 +84,6 @@ ActionSheet(title: Text(""), message: nil,
                     VStack{
                         Text("Notes")
                             .font(.title)
-                        Text("Great for making lists")
-                            .font(.footnote)
                     }
                 }
             //MARK: options - userdefaults
@@ -126,6 +127,7 @@ ActionSheet(title: Text(""), message: nil,
                 /* some devices do not have bottom toolbar*/
 
             }
+
     //MARK: - View LifeCycle
     }
     //MARK: OnOpenUrl
@@ -133,7 +135,6 @@ ActionSheet(title: Text(""), message: nil,
         guard url.scheme == "com.lozzoc.SimpleNotes.SpecificNote" else {return}
         
         if let host = url.host {
-            print("DEEP onopenurl listnote: \(host)")
             let note = notes.first { (el) -> Bool in
                 return el.id == host
             }
@@ -142,10 +143,6 @@ ActionSheet(title: Text(""), message: nil,
         }
     })
     //MARK: onAppear
-    .onAppear(perform: {
-        print(NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).last! as String)
-        
-    })
     //MARK: OnDisappear
     .onDisappear(perform: {
         currentItem = nil
@@ -153,6 +150,16 @@ ActionSheet(title: Text(""), message: nil,
     
 }
 
+}
+
+func getBackgroundColor() -> Color {
+    guard let defaults = UserDefaults(suiteName: "group.com.lozzoc.SimpleNotes") else {return Color.white}
+    var color: CGColor = Color.white.cgColor!
+    if let components: [ CGFloat ] = defaults.array(forKey: USER_PREF_COLOR ) as? [CGFloat], components.count == 4 {
+        color = ExtColor(displayP3Red: components[0], green: components[1], blue: components[2], alpha: components[3]).cgColor
+   }
+   return Color(color)
+    
 }
 
 

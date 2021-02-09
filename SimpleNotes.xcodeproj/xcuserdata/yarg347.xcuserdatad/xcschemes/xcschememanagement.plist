@@ -7,7 +7,7 @@
 		<key>DynamicNotesList.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>3</integer>
+			<integer>2</integer>
 		</dict>
 		<key>DynamicNotesListUI.xcscheme_^#shared#^_</key>
 		<dict>
@@ -53,7 +53,7 @@
 		<key>SimpleNotes.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>2</integer>
+			<integer>3</integer>
 		</dict>
 		<key>SimpleNotesWidget (Complication).xcscheme_^#shared#^_</key>
 		<dict>
@@ -69,6 +69,34 @@
 		<dict>
 			<key>orderHint</key>
 			<integer>3</integer>
+		</dict>
+		<key>dummyExtension.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>B5798B9A25B7C0B6005EE93E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B5A3FDA425C0D5FA00FD12D2</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B5D2D34325C1FD7B00A72A53</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B5D2D34D25C1FD7B00A72A53</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>

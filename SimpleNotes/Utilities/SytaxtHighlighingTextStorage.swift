@@ -8,8 +8,9 @@
 import UIKit
 
 class SytaxtHighlighingTextStorage: NSTextStorage {
-    var tfontDescriptor: UIFontDescriptor?
-    var bfontDescriptor: UIFontDescriptor?
+
+    var tFont: UIFont = UIFont.preferredFont(forTextStyle: .title2)
+    var bFont: UIFont = UIFont.preferredFont(forTextStyle: .body)
     
     let backingStore = NSMutableAttributedString()
     var titleFormated: Bool = false
@@ -26,11 +27,12 @@ class SytaxtHighlighingTextStorage: NSTextStorage {
     
     override func replaceCharacters(in range: NSRange, with str: String) {
         
+    
       beginEditing()
       backingStore.replaceCharacters(in: range, with:str)
       edited(.editedCharacters, range: range,
              changeInLength: (str as NSString).length - range.length)
-      endEditing()
+        endEditing()
     }
       
     override func setAttributes(_ attrs: [NSAttributedString.Key: Any]?, range: NSRange) {
@@ -44,27 +46,10 @@ class SytaxtHighlighingTextStorage: NSTextStorage {
     
     func applyStylesToRange(searchRange: NSRange) {
         
-        var titleFont: UIFont
-        var normFont: UIFont
-
-        if let tDescriptor = self.tfontDescriptor {
-            guard let fromSymbol = tDescriptor.withSymbolicTraits(.traitBold) else { return}
-            titleFont = UIFont(descriptor: fromSymbol, size: 32)
-        }
-        else {
-            titleFont = UIFont.preferredFont(forTextStyle: .title2)
-        }
+        let normAttrs = [NSAttributedString.Key.font: bFont]
+        let boldAttributes = [NSAttributedString.Key.font: tFont]
         
-        if let bDescriptor = self.bfontDescriptor {
-            normFont = UIFont(descriptor: bDescriptor, size: 25)
-        }
-        else {
-            normFont = UIFont.preferredFont(forTextStyle: .body)
-        }
         
-        let normAttrs = [NSAttributedString.Key.font: normFont]
-        let boldAttributes = [NSAttributedString.Key.font: titleFont]
-     
         if(searchRange.lowerBound > 0 && titleFormated == false) {
             // this means newline
             titleFormated = true
@@ -72,28 +57,6 @@ class SytaxtHighlighingTextStorage: NSTextStorage {
             addAttributes(normAttrs, range: NSMakeRange(searchRange.location, 1))
             return
         }
-        /*
-      // 2
-      let regexStr = "(/^(.*)$/m)"
-      let regex = try! NSRegularExpression(pattern: regexStr)
-
-      // 3
-        
-    
-      regex.enumerateMatches(in: backingStore.string, range: searchRange) {
-        match, flags, stop in
-        
-        if let matchRange = match?.range(at: 1) {
-          addAttributes(boldAttributes, range: matchRange)
-            
-          print(matchRange)
-          let maxRange = matchRange.location + matchRange.length
-          if maxRange + 1 < length {
-            addAttributes(normalAttributes, range: NSMakeRange(maxRange, 1))
-          }
-        }
-      }
-        */
         
     }
     

@@ -9,11 +9,11 @@
 	<key>INIntentDefinitionNamespace</key>
 	<string>EWvM7e</string>
 	<key>INIntentDefinitionSystemVersion</key>
-	<string>20C69</string>
+	<string>20D64</string>
 	<key>INIntentDefinitionToolsBuildVersion</key>
-	<string>12C33</string>
+	<string>12D4e</string>
 	<key>INIntentDefinitionToolsVersion</key>
-	<string>12.3</string>
+	<string>12.4</string>
 	<key>INIntents</key>
 	<array>
 		<dict>
@@ -26,7 +26,7 @@
 			<key>INIntentIneligibleForSuggestions</key>
 			<true/>
 			<key>INIntentLastParameterTag</key>
-			<integer>5</integer>
+			<integer>7</integer>
 			<key>INIntentName</key>
 			<string>NoteConfiguration</string>
 			<key>INIntentParameters</key>
@@ -68,6 +68,48 @@
 					<key>INIntentParameterType</key>
 					<string>Object</string>
 				</dict>
+				<dict>
+					<key>INIntentParameterConfigurable</key>
+					<true/>
+					<key>INIntentParameterDisplayName</key>
+					<string>Optimize this widget for a list?</string>
+					<key>INIntentParameterDisplayNameID</key>
+					<string>rYd1ud</string>
+					<key>INIntentParameterDisplayPriority</key>
+					<integer>2</integer>
+					<key>INIntentParameterMetadata</key>
+					<dict>
+						<key>INIntentParameterMetadataFalseDisplayName</key>
+						<string>false</string>
+						<key>INIntentParameterMetadataFalseDisplayNameID</key>
+						<string>zainai</string>
+						<key>INIntentParameterMetadataTrueDisplayName</key>
+						<string>true</string>
+						<key>INIntentParameterMetadataTrueDisplayNameID</key>
+						<string>3THQPq</string>
+					</dict>
+					<key>INIntentParameterName</key>
+					<string>shouldBeOptimizedForList</string>
+					<key>INIntentParameterPromptDialogs</key>
+					<array>
+						<dict>
+							<key>INIntentParameterPromptDialogCustom</key>
+							<true/>
+							<key>INIntentParameterPromptDialogType</key>
+							<string>Configuration</string>
+						</dict>
+						<dict>
+							<key>INIntentParameterPromptDialogCustom</key>
+							<true/>
+							<key>INIntentParameterPromptDialogType</key>
+							<string>Primary</string>
+						</dict>
+					</array>
+					<key>INIntentParameterTag</key>
+					<integer>7</integer>
+					<key>INIntentParameterType</key>
+					<string>Boolean</string>
+				</dict>
 			</array>
 			<key>INIntentResponse</key>
 			<dict>
@@ -103,7 +145,7 @@
 			<key>INTypeDisplayNameID</key>
 			<string>63VkTT</string>
 			<key>INTypeLastPropertyTag</key>
-			<integer>104</integer>
+			<integer>105</integer>
 			<key>INTypeName</key>
 			<string>NoteForWidget</string>
 			<key>INTypeProperties</key>
