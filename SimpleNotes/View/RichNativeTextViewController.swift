@@ -138,6 +138,10 @@ struct RichNativeTextViewController: UIViewControllerRepresentable {
             textStorage =  SytaxtHighlighingTextStorage()
             textStorage.bFont = bodyfont
             textStorage.tFont = titlefont
+            
+            if let _ = parent.initialNote {
+                textStorage.titleFormated = true
+            }
 
         }
         
@@ -226,6 +230,11 @@ struct RichNativeTextViewController: UIViewControllerRepresentable {
               // 4
             let textViewt: UITextView = UITextView(frame: newTextViewRect,textContainer: container)
             textViewt.translatesAutoresizingMaskIntoConstraints = false
+            
+            
+            if let _ = note {
+                textStorage.titleFormated = true
+            }
             return textViewt
         }
         

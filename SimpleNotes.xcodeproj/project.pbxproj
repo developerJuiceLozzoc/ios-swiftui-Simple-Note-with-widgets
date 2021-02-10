@@ -27,8 +27,6 @@
 		B58D956A25CDFA050022503F /* Optimized4ListWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58D955F25CDF73B0022503F /* Optimized4ListWidget.swift */; };
 		B58D956F25CDFA080022503F /* PlainWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58D955525CDF6830022503F /* PlainWidget.swift */; };
 		B58D957425CDFA080022503F /* PlainWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58D955525CDF6830022503F /* PlainWidget.swift */; };
-		B58D957925CDFDE80022503F /* Optimized4ListWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58D955F25CDF73B0022503F /* Optimized4ListWidget.swift */; };
-		B58D957E25CDFDEB0022503F /* PlainWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58D955525CDF6830022503F /* PlainWidget.swift */; };
 		B58D95C225D1C16A0022503F /* RichNativeTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58D95C125D1C16A0022503F /* RichNativeTextViewController.swift */; };
 		B58D95D825D3226C0022503F /* WrappedNoteEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58D95D725D3226C0022503F /* WrappedNoteEditor.swift */; };
 		B592C60025BA4B4A00E12374 /* LongPress.swift in Sources */ = {isa = PBXBuildFile; fileRef = B592C5FF25BA4B4A00E12374 /* LongPress.swift */; };
@@ -43,28 +41,17 @@
 		B5A3FDFB25C1F22F00FD12D2 /* SimpleNotesWidgetConfiguration.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = B5A3FDF925C1F22F00FD12D2 /* SimpleNotesWidgetConfiguration.intentdefinition */; };
 		B5A41C9B25CB0DD8002DE76B /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = B541BEB425CA700800A6C42B /* UserDefaults.swift */; };
 		B5A41CA025CB0DDA002DE76B /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = B541BEB425CA700800A6C42B /* UserDefaults.swift */; };
-		B5A41CA525CB0DDA002DE76B /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = B541BEB425CA700800A6C42B /* UserDefaults.swift */; };
-		B5A41CAA25CB0DE6002DE76B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5798BEA25BA0172005EE93E /* Extensions.swift */; };
 		B5A41CAF25CB0DE6002DE76B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5798BEA25BA0172005EE93E /* Extensions.swift */; };
 		B5A41CB025CB0DE6002DE76B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5798BEA25BA0172005EE93E /* Extensions.swift */; };
 		B5A41CC625CB6AFE002DE76B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5A41CC525CB6AFE002DE76B /* Assets.xcassets */; };
 		B5D2D34525C1FD7B00A72A53 /* Intents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5B4E7DF25C1F9D200E389AF /* Intents.framework */; };
 		B5D2D34825C1FD7B00A72A53 /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D2D34725C1FD7B00A72A53 /* IntentHandler.swift */; };
-		B5D2D34F25C1FD7B00A72A53 /* IntentsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5B4E7EA25C1F9D200E389AF /* IntentsUI.framework */; };
-		B5D2D35225C1FD7B00A72A53 /* IntentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D2D35125C1FD7B00A72A53 /* IntentViewController.swift */; };
-		B5D2D35525C1FD7B00A72A53 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5D2D35325C1FD7B00A72A53 /* MainInterface.storyboard */; };
-		B5D2D35925C1FD7B00A72A53 /* DynamicNotesListUI.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = B5D2D34E25C1FD7B00A72A53 /* DynamicNotesListUI.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		B5D2D35C25C1FD7B00A72A53 /* DynamicNotesList.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = B5D2D34425C1FD7B00A72A53 /* DynamicNotesList.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		B5D2D36925C1FD8300A72A53 /* SimpleNotesWidgetConfiguration.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = B5A3FDF925C1F22F00FD12D2 /* SimpleNotesWidgetConfiguration.intentdefinition */; };
-		B5D2D37925C1FD9400A72A53 /* SimpleNotesWidgetConfiguration.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = B5A3FDF925C1F22F00FD12D2 /* SimpleNotesWidgetConfiguration.intentdefinition */; };
 		B5D2D37E25C1FD9900A72A53 /* NoteStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5798BD125B7EEE8005EE93E /* NoteStore.swift */; };
-		B5D2D38325C1FD9900A72A53 /* NoteStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5798BD125B7EEE8005EE93E /* NoteStore.swift */; };
-		B5D2D38825C1FD9E00A72A53 /* NoteCoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B5798BFA25BA26C3005EE93E /* NoteCoreData.xcdatamodeld */; };
 		B5D2D38D25C1FD9E00A72A53 /* NoteCoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B5798BFA25BA26C3005EE93E /* NoteCoreData.xcdatamodeld */; };
 		B5D2D38E25C1FDA000A72A53 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5798BA725B7C0B7005EE93E /* Persistence.swift */; };
-		B5D2D39325C1FDA000A72A53 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5798BA725B7C0B7005EE93E /* Persistence.swift */; };
 		B5E4119F25CDA28800BCF065 /* WidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E4118E25CDA01800BCF065 /* WidgetView.swift */; };
-		B5E86C5725C2081B00C09CBB /* SimpleNoteWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A3FDAB25C0D5FB00FD12D2 /* SimpleNoteWidget.swift */; };
 		B5E86C5C25C2081B00C09CBB /* SimpleNoteWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A3FDAB25C0D5FB00FD12D2 /* SimpleNoteWidget.swift */; };
 		B5E86C5D25C2081C00C09CBB /* SimpleNoteWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A3FDAB25C0D5FB00FD12D2 /* SimpleNoteWidget.swift */; };
 		B5E86C7425C21DAA00C09CBB /* DummyItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E86C7325C21DAA00C09CBB /* DummyItem.swift */; };
@@ -77,13 +64,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = B5A3FDA425C0D5FA00FD12D2;
 			remoteInfo = SimpleNoteWidgetExtension;
-		};
-		B5D2D35725C1FD7B00A72A53 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B5798B9325B7C0B6005EE93E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B5D2D34D25C1FD7B00A72A53;
-			remoteInfo = DynamicNotesListUI;
 		};
 		B5D2D35A25C1FD7B00A72A53 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -111,7 +91,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				B5D2D35925C1FD7B00A72A53 /* DynamicNotesListUI.appex in Embed App Extensions */,
 				B5D2D35C25C1FD7B00A72A53 /* DynamicNotesList.appex in Embed App Extensions */,
 				B5A3FDB525C0D5FD00FD12D2 /* SimpleNoteWidgetExtension.appex in Embed App Extensions */,
 			);
@@ -156,10 +135,6 @@
 		B5D2D34425C1FD7B00A72A53 /* DynamicNotesList.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = DynamicNotesList.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5D2D34725C1FD7B00A72A53 /* IntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentHandler.swift; sourceTree = "<group>"; };
 		B5D2D34925C1FD7B00A72A53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B5D2D34E25C1FD7B00A72A53 /* DynamicNotesListUI.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = DynamicNotesListUI.appex; sourceTree = BUILT_PRODUCTS_DIR; };
-		B5D2D35125C1FD7B00A72A53 /* IntentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentViewController.swift; sourceTree = "<group>"; };
-		B5D2D35425C1FD7B00A72A53 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
-		B5D2D35625C1FD7B00A72A53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B5E4118E25CDA01800BCF065 /* WidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetView.swift; sourceTree = "<group>"; };
 		B5E86C6D25C20ACA00C09CBB /* SimpleNoteWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SimpleNoteWidgetExtension.entitlements; sourceTree = "<group>"; };
 		B5E86C6E25C20AD300C09CBB /* DynamicNotesList.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DynamicNotesList.entitlements; sourceTree = "<group>"; };
@@ -192,14 +167,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B5D2D34B25C1FD7B00A72A53 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B5D2D34F25C1FD7B00A72A53 /* IntentsUI.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -222,7 +189,6 @@
 				B5798B9D25B7C0B6005EE93E /* SimpleNotes */,
 				B5A3FDAA25C0D5FB00FD12D2 /* SimpleNoteWidget */,
 				B5D2D34625C1FD7B00A72A53 /* DynamicNotesList */,
-				B5D2D35025C1FD7B00A72A53 /* DynamicNotesListUI */,
 				B5798B9C25B7C0B6005EE93E /* Products */,
 				8433B1F6771D8C057967562B /* Frameworks */,
 				FAAD34CE0752E8334007FF0D /* Pods */,
@@ -235,7 +201,6 @@
 				B5798B9B25B7C0B6005EE93E /* SimpleNotes.app */,
 				B5A3FDA525C0D5FA00FD12D2 /* SimpleNoteWidgetExtension.appex */,
 				B5D2D34425C1FD7B00A72A53 /* DynamicNotesList.appex */,
-				B5D2D34E25C1FD7B00A72A53 /* DynamicNotesListUI.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -347,16 +312,6 @@
 			path = DynamicNotesList;
 			sourceTree = "<group>";
 		};
-		B5D2D35025C1FD7B00A72A53 /* DynamicNotesListUI */ = {
-			isa = PBXGroup;
-			children = (
-				B5D2D35125C1FD7B00A72A53 /* IntentViewController.swift */,
-				B5D2D35325C1FD7B00A72A53 /* MainInterface.storyboard */,
-				B5D2D35625C1FD7B00A72A53 /* Info.plist */,
-			);
-			path = DynamicNotesListUI;
-			sourceTree = "<group>";
-		};
 		B5E4118D25CDA00B00BCF065 /* DummyPreviews */ = {
 			isa = PBXGroup;
 			children = (
@@ -389,7 +344,6 @@
 			);
 			dependencies = (
 				B5A3FDB425C0D5FD00FD12D2 /* PBXTargetDependency */,
-				B5D2D35825C1FD7B00A72A53 /* PBXTargetDependency */,
 				B5D2D35B25C1FD7B00A72A53 /* PBXTargetDependency */,
 			);
 			name = SimpleNotes;
@@ -431,23 +385,6 @@
 			productReference = B5D2D34425C1FD7B00A72A53 /* DynamicNotesList.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
-		B5D2D34D25C1FD7B00A72A53 /* DynamicNotesListUI */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = B5D2D35D25C1FD7B00A72A53 /* Build configuration list for PBXNativeTarget "DynamicNotesListUI" */;
-			buildPhases = (
-				B5D2D34A25C1FD7B00A72A53 /* Sources */,
-				B5D2D34B25C1FD7B00A72A53 /* Frameworks */,
-				B5D2D34C25C1FD7B00A72A53 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = DynamicNotesListUI;
-			productName = DynamicNotesListUI;
-			productReference = B5D2D34E25C1FD7B00A72A53 /* DynamicNotesListUI.appex */;
-			productType = "com.apple.product-type.app-extension";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -464,9 +401,6 @@
 						CreatedOnToolsVersion = 12.3;
 					};
 					B5D2D34325C1FD7B00A72A53 = {
-						CreatedOnToolsVersion = 12.3;
-					};
-					B5D2D34D25C1FD7B00A72A53 = {
 						CreatedOnToolsVersion = 12.3;
 					};
 				};
@@ -489,7 +423,6 @@
 				B5798B9A25B7C0B6005EE93E /* SimpleNotes */,
 				B5A3FDA425C0D5FA00FD12D2 /* SimpleNoteWidgetExtension */,
 				B5D2D34325C1FD7B00A72A53 /* DynamicNotesList */,
-				B5D2D34D25C1FD7B00A72A53 /* DynamicNotesListUI */,
 			);
 		};
 /* End PBXProject section */
@@ -516,14 +449,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B5D2D34C25C1FD7B00A72A53 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B5D2D35525C1FD7B00A72A53 /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -590,23 +515,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B5D2D34A25C1FD7B00A72A53 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B5D2D38325C1FD9900A72A53 /* NoteStore.swift in Sources */,
-				B5D2D35225C1FD7B00A72A53 /* IntentViewController.swift in Sources */,
-				B5D2D38825C1FD9E00A72A53 /* NoteCoreData.xcdatamodeld in Sources */,
-				B5A41CAA25CB0DE6002DE76B /* Extensions.swift in Sources */,
-				B58D957E25CDFDEB0022503F /* PlainWidget.swift in Sources */,
-				B5D2D37925C1FD9400A72A53 /* SimpleNotesWidgetConfiguration.intentdefinition in Sources */,
-				B58D957925CDFDE80022503F /* Optimized4ListWidget.swift in Sources */,
-				B5D2D39325C1FDA000A72A53 /* Persistence.swift in Sources */,
-				B5A41CA525CB0DDA002DE76B /* UserDefaults.swift in Sources */,
-				B5E86C5725C2081B00C09CBB /* SimpleNoteWidget.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -615,28 +523,12 @@
 			target = B5A3FDA425C0D5FA00FD12D2 /* SimpleNoteWidgetExtension */;
 			targetProxy = B5A3FDB325C0D5FD00FD12D2 /* PBXContainerItemProxy */;
 		};
-		B5D2D35825C1FD7B00A72A53 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = B5D2D34D25C1FD7B00A72A53 /* DynamicNotesListUI */;
-			targetProxy = B5D2D35725C1FD7B00A72A53 /* PBXContainerItemProxy */;
-		};
 		B5D2D35B25C1FD7B00A72A53 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = B5D2D34325C1FD7B00A72A53 /* DynamicNotesList */;
 			targetProxy = B5D2D35A25C1FD7B00A72A53 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		B5D2D35325C1FD7B00A72A53 /* MainInterface.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B5D2D35425C1FD7B00A72A53 /* Base */,
-			);
-			name = MainInterface.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		B5798BAD25B7C0B7005EE93E /* Debug */ = {
@@ -772,6 +664,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 0.8.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.lozzoc.SimpleNotes;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -796,6 +689,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 0.8.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.lozzoc.SimpleNotes;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -817,6 +711,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
+				MARKETING_VERSION = 0.8.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.lozzoc.SimpleNotes.SimpleNoteWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -839,45 +734,8 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
+				MARKETING_VERSION = 0.8.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.lozzoc.SimpleNotes.SimpleNoteWidget;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		B5D2D35E25C1FD7B00A72A53 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3463GQXGTB;
-				INFOPLIST_FILE = DynamicNotesListUI/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.lozzoc.SimpleNotes.DynamicNotesListUI;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		B5D2D35F25C1FD7B00A72A53 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3463GQXGTB;
-				INFOPLIST_FILE = DynamicNotesListUI/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.lozzoc.SimpleNotes.DynamicNotesListUI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -897,6 +755,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
+				MARKETING_VERSION = 0.8.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.lozzoc.SimpleNotes.DynamicNotesList;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -917,6 +776,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
+				MARKETING_VERSION = 0.8.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.lozzoc.SimpleNotes.DynamicNotesList;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -951,15 +811,6 @@
 			buildConfigurations = (
 				B5A3FDB725C0D5FD00FD12D2 /* Debug */,
 				B5A3FDB825C0D5FD00FD12D2 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		B5D2D35D25C1FD7B00A72A53 /* Build configuration list for PBXNativeTarget "DynamicNotesListUI" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				B5D2D35E25C1FD7B00A72A53 /* Debug */,
-				B5D2D35F25C1FD7B00A72A53 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

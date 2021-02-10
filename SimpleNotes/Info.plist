@@ -17,17 +17,14 @@
 	<key>CFBundlePackageType</key>
 	<string>$(PRODUCT_BUNDLE_PACKAGE_TYPE)</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.0</string>
+	<string>$(MARKETING_VERSION)</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSUserActivityTypes</key>
 	<array>
-		<string>EditNoteWidgetIntent</string>
 		<string>NoteConfigurationIntent</string>
-		<string>ViewMonthyExpenseIntent</string>
-		<string>ViewSpecificNoteIntent</string>
 	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
