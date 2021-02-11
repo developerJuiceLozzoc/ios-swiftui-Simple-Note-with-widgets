@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-
+import WidgetKit
 
 
 
@@ -29,8 +29,28 @@ struct PlainWidget: View {
                     .font(Font(bodyFont))
                     .padding(.leading)
                 Spacer()
-            }
+            }.padding()
             Spacer()
         }
+    }
+}
+
+
+struct PlainWidget_Previews: PreviewProvider {
+    static var previews: some View {
+        PlainWidget(
+            titleText: "TasteFul Anime",
+            bodyText: """
+                            - Food Wars!
+                            - Plunderer
+                            - Dorohedoro
+                            - My Hero Acedemia
+                            - One Punch Man
+                            - Cory in the House
+                            - Castlevania
+                        """,
+            bodyFont: UIFont.preferredFont(forTextStyle: .body),
+            titleFont: UIFont.preferredFont(forTextStyle: .title1)
+        ).previewContext(WidgetPreviewContext(family: .systemLarge))
     }
 }

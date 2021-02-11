@@ -52,6 +52,9 @@
 		B5D2D38D25C1FD9E00A72A53 /* NoteCoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B5798BFA25BA26C3005EE93E /* NoteCoreData.xcdatamodeld */; };
 		B5D2D38E25C1FDA000A72A53 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5798BA725B7C0B7005EE93E /* Persistence.swift */; };
 		B5E4119F25CDA28800BCF065 /* WidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E4118E25CDA01800BCF065 /* WidgetView.swift */; };
+		B5E7A61325D49C750076F12C /* FastPreviewWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E7A61225D49C750076F12C /* FastPreviewWidget.swift */; };
+		B5E7A61425D49C750076F12C /* FastPreviewWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E7A61225D49C750076F12C /* FastPreviewWidget.swift */; };
+		B5E7A61525D49C750076F12C /* FastPreviewWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E7A61225D49C750076F12C /* FastPreviewWidget.swift */; };
 		B5E86C5C25C2081B00C09CBB /* SimpleNoteWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A3FDAB25C0D5FB00FD12D2 /* SimpleNoteWidget.swift */; };
 		B5E86C5D25C2081C00C09CBB /* SimpleNoteWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A3FDAB25C0D5FB00FD12D2 /* SimpleNoteWidget.swift */; };
 		B5E86C7425C21DAA00C09CBB /* DummyItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E86C7325C21DAA00C09CBB /* DummyItem.swift */; };
@@ -136,6 +139,7 @@
 		B5D2D34725C1FD7B00A72A53 /* IntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentHandler.swift; sourceTree = "<group>"; };
 		B5D2D34925C1FD7B00A72A53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B5E4118E25CDA01800BCF065 /* WidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetView.swift; sourceTree = "<group>"; };
+		B5E7A61225D49C750076F12C /* FastPreviewWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastPreviewWidget.swift; sourceTree = "<group>"; };
 		B5E86C6D25C20ACA00C09CBB /* SimpleNoteWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SimpleNoteWidgetExtension.entitlements; sourceTree = "<group>"; };
 		B5E86C6E25C20AD300C09CBB /* DynamicNotesList.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DynamicNotesList.entitlements; sourceTree = "<group>"; };
 		B5E86C7325C21DAA00C09CBB /* DummyItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyItem.swift; sourceTree = "<group>"; };
@@ -191,7 +195,6 @@
 				B5D2D34625C1FD7B00A72A53 /* DynamicNotesList */,
 				B5798B9C25B7C0B6005EE93E /* Products */,
 				8433B1F6771D8C057967562B /* Frameworks */,
-				FAAD34CE0752E8334007FF0D /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -285,6 +288,7 @@
 			children = (
 				B58D955525CDF6830022503F /* PlainWidget.swift */,
 				B58D955F25CDF73B0022503F /* Optimized4ListWidget.swift */,
+				B5E7A61225D49C750076F12C /* FastPreviewWidget.swift */,
 			);
 			path = ReusableViews;
 			sourceTree = "<group>";
@@ -318,13 +322,6 @@
 				B5E4118E25CDA01800BCF065 /* WidgetView.swift */,
 			);
 			path = DummyPreviews;
-			sourceTree = "<group>";
-		};
-		FAAD34CE0752E8334007FF0D /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -473,6 +470,7 @@
 				B5A3FDFA25C1F22F00FD12D2 /* SimpleNotesWidgetConfiguration.intentdefinition in Sources */,
 				B5798BD225B7EEE8005EE93E /* NoteStore.swift in Sources */,
 				B5798B9F25B7C0B6005EE93E /* SimpleNotesApp.swift in Sources */,
+				B5E7A61325D49C750076F12C /* FastPreviewWidget.swift in Sources */,
 				B58D95C225D1C16A0022503F /* RichNativeTextViewController.swift in Sources */,
 				B5798BDA25B87CEB005EE93E /* BindingPreview.swift in Sources */,
 				B58D95D825D3226C0022503F /* WrappedNoteEditor.swift in Sources */,
@@ -485,6 +483,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5E7A61425D49C750076F12C /* FastPreviewWidget.swift in Sources */,
 				B5A3FDBC25C0DA4500FD12D2 /* NoteStore.swift in Sources */,
 				B5E86C5D25C2081C00C09CBB /* SimpleNoteWidget.swift in Sources */,
 				B5E4119F25CDA28800BCF065 /* WidgetView.swift in Sources */,
@@ -502,6 +501,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5E7A61525D49C750076F12C /* FastPreviewWidget.swift in Sources */,
 				B5D2D37E25C1FD9900A72A53 /* NoteStore.swift in Sources */,
 				B5D2D34825C1FD7B00A72A53 /* IntentHandler.swift in Sources */,
 				B5D2D38D25C1FD9E00A72A53 /* NoteCoreData.xcdatamodeld in Sources */,
@@ -655,6 +655,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = SimpleNotes/SimpleNotes.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"SimpleNotes/Preview Content\"";
 				DEVELOPMENT_TEAM = 3463GQXGTB;
 				ENABLE_PREVIEWS = YES;
@@ -664,7 +665,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.8.0;
+				MARKETING_VERSION = 0.8.5;
 				PRODUCT_BUNDLE_IDENTIFIER = com.lozzoc.SimpleNotes;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -680,6 +681,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = SimpleNotes/SimpleNotes.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"SimpleNotes/Preview Content\"";
 				DEVELOPMENT_TEAM = 3463GQXGTB;
 				ENABLE_PREVIEWS = YES;
@@ -689,7 +691,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.8.0;
+				MARKETING_VERSION = 0.8.5;
 				PRODUCT_BUNDLE_IDENTIFIER = com.lozzoc.SimpleNotes;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -704,6 +706,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = SimpleNoteWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 3463GQXGTB;
 				INFOPLIST_FILE = SimpleNoteWidget/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -711,7 +714,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 0.8.0;
+				MARKETING_VERSION = 0.8.5;
 				PRODUCT_BUNDLE_IDENTIFIER = com.lozzoc.SimpleNotes.SimpleNoteWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -727,6 +730,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = SimpleNoteWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 3463GQXGTB;
 				INFOPLIST_FILE = SimpleNoteWidget/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -734,7 +738,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 0.8.0;
+				MARKETING_VERSION = 0.8.5;
 				PRODUCT_BUNDLE_IDENTIFIER = com.lozzoc.SimpleNotes.SimpleNoteWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -748,6 +752,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = DynamicNotesList/DynamicNotesList.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 3463GQXGTB;
 				INFOPLIST_FILE = DynamicNotesList/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -755,7 +760,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 0.8.0;
+				MARKETING_VERSION = 0.8.5;
 				PRODUCT_BUNDLE_IDENTIFIER = com.lozzoc.SimpleNotes.DynamicNotesList;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -769,6 +774,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = DynamicNotesList/DynamicNotesList.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 3463GQXGTB;
 				INFOPLIST_FILE = DynamicNotesList/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -776,7 +782,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 0.8.0;
+				MARKETING_VERSION = 0.8.5;
 				PRODUCT_BUNDLE_IDENTIFIER = com.lozzoc.SimpleNotes.DynamicNotesList;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;

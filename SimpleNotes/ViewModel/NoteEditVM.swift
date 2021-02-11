@@ -34,7 +34,6 @@ class NoteEditVM {
             return delegate.addNoteToModel(with: notecontent)
         }
         
-        print("FINISHED SAVING NOTE",note)
     }
 }
  

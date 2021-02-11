@@ -27,33 +27,30 @@ struct Provider: IntentTimelineProvider {
     }
 
     func getSnapshot(for configuration: NoteConfigurationIntent, in context: Context, completion: @escaping (SimpleEntry) -> ()) {
+
         switch context.family {
             case .systemSmall:
                 configuration.shortNoteInfo = NoteForWidget(identifier: UUID().uuidString, display: "Call Jennie")
+                configuration.shouldBeOptimizedForList = false
                 configuration.shortNoteInfo?.body = "867-5309"
                 break;
-//            case .systemMedium:
-//                configuration.shortNoteInfo = NoteForWidget(identifier: UUID().uuidString, display: "Call Jennie")
-//                configuration.shortNoteInfo?.body = "867-5309"
-//                break;
             case .systemLarge:
                 fallthrough
             default:
                 configuration.shortNoteInfo = NoteForWidget(identifier: UUID().uuidString, display:  "Tasteful Animes")
+                configuration.shouldBeOptimizedForList = false
                 configuration.shortNoteInfo?.body = """
                         - Food Wars!
                         - Plunderer
                         - Dorohedoro
-                        - Darker Than Black
+                        - My Hero Acedemia
                         - One Punch Man
                         - Cory in the House
-                        - Higurashi When They Cry
                         - Castlevania
                     """
                 break
         }
-        let entry = SimpleEntry(date: Date(), configuration: configuration)
-        completion(entry)
+        completion(SimpleEntry(date: Date(), configuration: configuration, isPreview: context.isPreview))
     }
 
     func getTimeline(for configuration: NoteConfigurationIntent, in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
@@ -74,6 +71,7 @@ struct Provider: IntentTimelineProvider {
 struct SimpleEntry: TimelineEntry {
     let date: Date
     public let configuration: NoteConfigurationIntent
+    var isPreview: Bool = false
 }
 
 struct SimpleNoteWidgetEntryView : View {
@@ -108,8 +106,13 @@ struct SimpleNoteWidgetEntryView : View {
 
     var body: some View {
         VStack{
+            if(entry.isPreview){
+                FastPreviewWidget(
+                    titleText: entry.configuration.shortNoteInfo!.displayString,
+                    bodyText:  entry.configuration.shortNoteInfo!.body!)
+            }
 
-            if(entry.configuration.shouldBeOptimizedForList == 1){
+            if(entry.configuration.shouldBeOptimizedForList == 1 && !entry.isPreview){
                 Optimized4ListWidget(
                     titleText: entry.configuration.shortNoteInfo?.displayString ?? "Oops this note has no title!",
                     bodyList1: splitArrayByX(height: 10, isOtherHalf: false, with: entry.configuration.shortNoteInfo?.body ?? ""),
@@ -117,7 +120,7 @@ struct SimpleNoteWidgetEntryView : View {
                     bodyFont: bodyFamilyChosen,
                     titleFont: titleFamilyChosen)
             }
-            if(entry.configuration.shouldBeOptimizedForList == 0){
+            if(entry.configuration.shouldBeOptimizedForList == 0 && !entry.isPreview){
                 PlainWidget(titleText:  entry.configuration.shortNoteInfo?.displayString ?? "Oops this note has no title!",
                             bodyText:  entry.configuration.shortNoteInfo?.body ?? "",
                                         bodyFont: bodyFamilyChosen,
@@ -150,7 +153,6 @@ func splitArrayByX(height: Int,isOtherHalf: Bool, with text: String) -> [String]
     return arr
 }
 
-@main
 struct SimpleNoteWidget: Widget {
     let kind: String = "SimpleNoteWidget"
     
@@ -161,12 +163,32 @@ struct SimpleNoteWidget: Widget {
             SimpleNoteWidgetEntryView(entry: entry)
                 .widgetURL(URL(string: "com.lozzoc.SimpleNotes.SpecificNote://\(entry.configuration.shortNoteInfo?.identifier ?? "")" ))
                 .frame(maxWidth: .infinity, maxHeight: .infinity)    // << here !!
-                .background(getBackgroundColor())
+                .background(entry.isPreview ? Color.clear : getBackgroundColor())
 
         }
         .configurationDisplayName("Note Detail")
-        .description("Get quick access to one of your notes")
+        .description("A note rendered right on your home screen!")
         .supportedFamilies([.systemSmall,.systemLarge])
+    }
+    
+    
+}
+struct QuickAccessWidget: Widget {
+    let kind: String = "SimpleNoteWidget"
+    
+    var body: some WidgetConfiguration {
+        IntentConfiguration(kind: kind,
+                            intent: NoteConfigurationIntent.self,
+                            provider: Provider()) { entry in
+            SimpleNoteWidgetEntryView(entry: entry)
+                .widgetURL(URL(string: "com.lozzoc.SimpleNotes.SpecificNote://\(entry.configuration.shortNoteInfo?.identifier ?? "")" ))
+                .frame(maxWidth: .infinity, maxHeight: .infinity)    // << here !!
+                .background(entry.isPreview ? Color.clear : getBackgroundColor())
+
+        }
+        .configurationDisplayName("Note Shortcut")
+        .description("Get Quick access to one of your notes.")
+        .supportedFamilies([.systemSmall])
     }
     
     
@@ -180,4 +202,14 @@ func getBackgroundColor() -> Color {
    }
    return Color(color)
     
+}
+
+
+@main
+struct NoteBundle: WidgetBundle {
+    @WidgetBundleBuilder
+    var body: some Widget {
+        QuickAccessWidget()
+        SimpleNoteWidget()
+    }
 }
