@@ -11,7 +11,8 @@ import Intents
 class IntentHandler: INExtension, NoteConfigurationIntentHandling {
     
 
-
+    // for the intent listed in the widget folder SimpleNoteWidget
+    // using coredata here to load the information async, could also be userdefaults or a network request.
     func provideShortNoteInfoOptionsCollection(for intent: NoteConfigurationIntent, with completion: @escaping (INObjectCollection<NoteForWidget>?, Error?) -> Void) {
         let tempStore = NoteStore()
         tempStore.loadAllNotesForChoose { results in
