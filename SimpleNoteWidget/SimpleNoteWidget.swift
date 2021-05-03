@@ -26,6 +26,8 @@ struct Provider: IntentTimelineProvider {
         return SimpleEntry(date: Date(), configuration: config)
     }
 
+    
+    // when the carousel picker for widget pops up, we can switch based on the size to render a hardcoded experience.
     func getSnapshot(for configuration: NoteConfigurationIntent, in context: Context, completion: @escaping (SimpleEntry) -> ()) {
 
         switch context.family {
@@ -106,12 +108,13 @@ struct SimpleNoteWidgetEntryView : View {
 
     var body: some View {
         VStack{
+            // do not load user defaults, this takes time and is not preferable for previewing widgets in the widget select
             if(entry.isPreview){
                 FastPreviewWidget(
                     titleText: entry.configuration.shortNoteInfo!.displayString,
                     bodyText:  entry.configuration.shortNoteInfo!.body!)
             }
-
+            //in the widget configure menu, there are toggles and fields and if this toggle is on, it created a 2 colom bulleted list
             if(entry.configuration.shouldBeOptimizedForList == 1 && !entry.isPreview){
                 Optimized4ListWidget(
                     titleText: entry.configuration.shortNoteInfo?.displayString ?? "Oops this note has no title!",
@@ -120,6 +123,7 @@ struct SimpleNoteWidgetEntryView : View {
                     bodyFont: bodyFamilyChosen,
                     titleFont: titleFamilyChosen)
             }
+            // render the wiget regualrly
             if(entry.configuration.shouldBeOptimizedForList == 0 && !entry.isPreview){
                 PlainWidget(titleText:  entry.configuration.shortNoteInfo?.displayString ?? "Oops this note has no title!",
                             bodyText:  entry.configuration.shortNoteInfo?.body ?? "",
@@ -204,7 +208,8 @@ func getBackgroundColor() -> Color {
     
 }
 
-
+// to enable more posible experiences in the widget picker carousel, we create a widget bundle, with multiple widgets inside of it,
+// each widget can have multiple familyies, and contains a differenrt description and configuration
 @main
 struct NoteBundle: WidgetBundle {
     @WidgetBundleBuilder
