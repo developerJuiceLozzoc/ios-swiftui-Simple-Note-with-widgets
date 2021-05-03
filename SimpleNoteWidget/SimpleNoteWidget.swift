@@ -15,6 +15,9 @@ struct Provider: IntentTimelineProvider {
     
     typealias Entry = SimpleEntry
     
+    
+//     in order to retrieve dynamic information, and make the widget configurable, we need an intent.
+   // implmented in ../DynamicNotesList/IntentHandler
     typealias Intent = NoteConfigurationIntent
     
     func placeholder(in context: Context) -> SimpleEntry {
